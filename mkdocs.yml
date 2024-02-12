@@ -159,6 +159,7 @@ plugins:
   - search
   - bibtex:
       bib_file: "refs.bib"
+      footnote_format: "ref{number}" # default "{number}", to avoid conflict with user-defined footnotes
 
 extra_javascript:
   - javascripts/katex.js

@@ -49,7 +49,7 @@ where
 
 $$
 \Omega_{{\rm I}}=\sum_n \left[\langle w_{n{\bf 0}}({\bf r})| r^2 | w_{n{\bf
-      0}}({\bf r}) \rangle - \sum_{{\bf R}m} \left| \langle w_{n{\bf
+      0}}({\bf r}) \rangle - \sum_{{\bf R}m} \left| \langle w_{m{\bf
       R}}({\bf r})| {\bf r} | w_{n{\bf 0}}({\bf r}) \rangle \right| ^2
       \right]
 $$
@@ -92,23 +92,21 @@ structure calculation.
 
 Note that $\mathbf{M}^{(\mathbf{k},\mathbf{b})}$,
 $\mathbf{A}^{(\mathbf{k})}$ and $\mathbf{U}^{(\mathbf{k})}$ are all
-small, $N \times N$ matrices[^1] that are independent of the basis set
+small, $N \times N$ matrices[^note1] that are independent of the basis set
 used to obtain the original Bloch states.
 
-
-[^1]: Technically, this is true for the case of an isolated group of $N$
+[^note1]: Technically, this is true for the case of an isolated group of $N$
     bands from which we obtain $N$ MLWF. When using the disentanglement
     procedure of Ref. [@souza-prb01], $\mathbf{A}^{(\mathbf{k})}$, for
     example, is a rectangular matrix. See
-    Section [1.1](#sec:disentangle){reference-type="ref"
-    reference="sec:disentangle"}.
+    Section [Entangled Energy Bands](#entangled-energy-bands).
 
 To date, `wannier90` has been used in combination with electronic codes
 based on plane-waves and pseudopotentials (norm-conserving and
 ultrasoft [@vanderbilt-prb90]) as well as mixed basis set techniques
 such as FLAPW [@posternak-prb02].
 
-### Entangled Energy Bands
+## Entangled Energy Bands
 
 The above description is sufficient to obtain MLWF for an isolated set
 of bands, such as the valence states in an insulator. In order to obtain
@@ -128,13 +126,13 @@ $$
 
 where
 $\bf{U}^{{\rm dis}({\bf k})}$ is a rectangular
-$N^{({\bf k})}_{{\rm win}} \times N$ matrix[^2]. The set of
+$N^{({\bf k})}_{{\rm win}} \times N$ matrix[^note2]. The set of
 $\bf{U}^{{\rm dis}({\bf k})}$ are obtained by minimising the gauge
 invariant spread $\Omega_{{\rm I}}$ within the outer energy window. The
 MV procedure can then be used to minimise $\tilde{\Omega}$ and hence
 obtain MLWF for this optimal subspace.
 
-[^2]: As ${\bf U}^{{\rm dis}({\bf k})}$ is a rectangular matrix this is
+[^note2]: As ${\bf U}^{{\rm dis}({\bf k})}$ is a rectangular matrix this is
     a unitary operation in the sense that $({\bf U}^{{\rm
      dis}({\bf k})})^{\dagger}{\bf U}^{{\rm dis}({\bf k})}={\bf 1}_N$.
 
