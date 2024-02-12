@@ -1,5 +1,13 @@
 site_name: My Docs
 
+nav:
+   - Home: 'index.md'
+   - 'User guide':
+      - 'Introduction': "user_guide/intro.md"
+      - 'wannier90.x': "user_guide/wannier90.md"
+      - 'postw90.x': "user_guide/postw90.md"
+      - "Appendices": "user_guide/appendices.md"
+
 theme:
   name: material
 
