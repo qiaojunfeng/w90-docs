@@ -1,12 +1,9 @@
-
 # Introduction
 
-## Introduction {#introduction-1 .unnumbered}
-
-### Getting Help {#getting-help .unnumbered}
+## Getting Help
 
 The latest release of `wannier90` and documentation can always be found
-at <http://www.wannier.org>.
+at <https://www.wannier.org>.
 
 The development version may be cloned/downloaded from the official
 repository of the `wannier90` code on GitHub (see
@@ -15,7 +12,7 @@ repository of the `wannier90` code on GitHub (see
 There is a `wannier90` mailing list for discussing issues in the
 development, theory, coding and algorithms pertinent to MLWF. You can
 register for this mailing list by following the links at
-<http://www.wannier.org/forum.html>. Alternatively, for technical issues
+<https://www.wannier.org/forum.html>. Alternatively, for technical issues
 about the `wannier90` code, check the official repository of
 `wannier90` on GitHub where you may raise issues or ask questions about
 about its functionalities.
@@ -26,7 +23,7 @@ expanded FAQ session may be found on the Wiki page of the GitHub
 repository at
 <https://github.com/wannier-developers/wannier90/wiki/FAQ>.
 
-### Citation {#citation .unnumbered}
+## Citations
 
 We ask that you acknowledge the use of `wannier90` in any publications
 arising from the use of this code through the following reference
@@ -36,31 +33,31 @@ arising from the use of this code through the following reference
 > Ibañez-Azpiroz, H. Lee, J.M. Lihm, D. Marchand, A. Marrazzo, Y.
 > Mokrousov, J.I. Mustafa, Y. Nohara, Y. Nomura, L. Paulatto, S. Poncé,
 > T. Ponweiser, J. Qiao, F. Thöle, S.S. Tsirkin, M. Wierzbowska, N.
-> Marzari, D. Vanderbilt, I. Souza, A.A. Mostofi, J.R. Yates,\
+> Marzari, D. Vanderbilt, I. Souza, A.A. Mostofi, J.R. Yates,
 > Wannier90 as a community code: new features and applications, *J.
-> Phys. Cond. Matt.* **32**, 165902 (2020)\
+> Phys. Cond. Matt.* **32**, 165902 (2020)
 > <https://doi.org/10.1088/1361-648X/ab51ff>
 
 If you are using versions 2.x of the code, cite instead:
 
 > \[ref\] A. A. Mostofi, J. R. Yates, G. Pizzi, Y.-S. Lee, I. Souza,
-> D. Vanderbilt and N. Marzari,\
+> D. Vanderbilt and N. Marzari,
 > An updated version of `wannier90`: A Tool for Obtaining
 > Maximally-Localised Wannier Functions, *Comput. Phys. Commun.*
-> **185**, 2309 (2014)\
+> **185**, 2309 (2014)
 > <http://dx.doi.org/10.1016/j.cpc.2014.05.003>
 
-It would also be appropriate to cite the original articles:\
-\
-Maximally localized generalized Wannier functions for composite energy
-bands,\
-N. Marzari and D. Vanderbilt, *Phys. Rev. B* **56**, 12847 (1997)\
-\
-Maximally localized Wannier functions for entangled energy bands,\
-I. Souza, N. Marzari and D. Vanderbilt, *Phys. Rev. B* **65**, 035109
-(2001)
+It would also be appropriate to cite the original articles:
 
-### Credits {#credits .unnumbered}
+> Maximally localized generalized Wannier functions for composite energy bands,
+> N. Marzari and D. Vanderbilt, *Phys. Rev. B* **56**, 12847 (1997)
+
+and
+
+> Maximally localized Wannier functions for entangled energy bands,
+> I. Souza, N. Marzari and D. Vanderbilt, *Phys. Rev. B* **65**, 035109 (2001)
+
+## Credits
 
 The Wannier90 Developer Group includes Giovanni Pizzi (EPFL, CH),
 Valerio Vitale (Cambridge, GB), David Vanderbilt (Rutgers University,
@@ -118,7 +115,7 @@ Souza, Nicola Marzari, and David Vanderbilt.
 `wannier90` © 2007-2020 The Wannier Developer Group and individual
 contributors
 
-### Licence {#licence .unnumbered}
+## Licence
 
 All the material in this distribution is free software; you can
 redistribute it and/or modify it under the terms of the GNU General
