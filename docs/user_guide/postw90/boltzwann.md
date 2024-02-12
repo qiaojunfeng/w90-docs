@@ -110,6 +110,13 @@ If spin decomposition is required (input flag `spin_decomp`), further
 columns are printed, with the spin-up projection of the DOS, followed by
 spin-down projection.
 
+[^6]: Note that in `BoltzWann` the adaptive (energy) smearing scheme
+    also implements a simple adaptive $k-$mesh scheme: if at any given
+    $k$ point one of the band gradients is zero, then that $k$ point is
+    replaced by 8 neighboring $k$ points. Thus, the final results for
+    the DOS may be slightly different with respect to that given by the
+    `dos` module.
+
 #### `seedname_tdf.dat`
 
 OUTPUT. This file contains the Transport Distribution Function (TDF)

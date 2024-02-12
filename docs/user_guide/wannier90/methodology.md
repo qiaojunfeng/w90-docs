@@ -26,24 +26,45 @@ zone (BZ), and $\mathbf{U}^{(\mathbf{k})}$ is a unitary matrix that
 mixes the Bloch states at each ${\bf k}$. $\mathbf{U}^{(\mathbf{k})}$ is
 not uniquely defined and different choices will lead to WF with varying
 spatial localisations. We define the spread $\Omega$ of the WF as
-$$\Omega=\sum_n \left[\langle w_{n{\bf 0}}({\bf r})| r^2 | w_{n{\bf
+
+$$
+\Omega=\sum_n \left[\langle w_{n{\bf 0}}({\bf r})| r^2 | w_{n{\bf
       0}}({\bf r}) \rangle - | \langle w_{n{\bf 0}}({\bf r})| {\bf r}
-      | w_{n{\bf 0}}({\bf r}) \rangle |^2 \right].$$ The total spread
+      | w_{n{\bf 0}}({\bf r}) \rangle |^2 \right].
+$$
+
+The total spread
 can be decomposed into a gauge invariant term $\Omega_{\rm I}$ plus a
 term ${\tilde \Omega}$ that is dependant on the gauge choice
 $\mathbf{U}^{(\mathbf{k})}$. ${\tilde \Omega}$ can be further divided
 into terms diagonal and off-diagonal in the WF basis, $\Omega_{\rm D}$
 and $\Omega_{\rm OD}$,
-$$\Omega=\Omega_{\rm I}+{\tilde \Omega}=\Omega_{\rm I}+\Omega_{\rm
-  D}+\Omega_{\rm OD}$$ where
-$$\Omega_{{\rm I}}=\sum_n \left[\langle w_{n{\bf 0}}({\bf r})| r^2 | w_{n{\bf
+
+$$
+\Omega=\Omega_{\rm I}+{\tilde \Omega}=\Omega_{\rm I}+\Omega_{\rm
+  D}+\Omega_{\rm OD}
+$$
+
+where
+
+$$
+\Omega_{{\rm I}}=\sum_n \left[\langle w_{n{\bf 0}}({\bf r})| r^2 | w_{n{\bf
       0}}({\bf r}) \rangle - \sum_{{\bf R}m} \left| \langle w_{n{\bf
       R}}({\bf r})| {\bf r} | w_{n{\bf 0}}({\bf r}) \rangle \right| ^2
-      \right]$$
-$$\Omega_{\rm D}=\sum_n \sum_{{\bf R}\neq{\bf 0}} |\langle w_{n{\bf
-    R}}({\bf r})| {\bf r} | w_{n{\bf 0}}({\bf r}) \rangle|^2$$
-$$\Omega_{\rm OD}=\sum_{m\neq n} \sum_{{\bf R}} |\langle w_{m{\bf R}}({\bf
-  r})| {\bf r} | w_{n{\bf 0}}({\bf r}) \rangle |^2$$ The MV method
+      \right]
+$$
+
+$$
+\Omega_{\rm D}=\sum_n \sum_{{\bf R}\neq{\bf 0}} |\langle w_{n{\bf
+    R}}({\bf r})| {\bf r} | w_{n{\bf 0}}({\bf r}) \rangle|^2
+$$
+
+$$
+\Omega_{\rm OD}=\sum_{m\neq n} \sum_{{\bf R}} |\langle w_{m{\bf R}}({\bf
+  r})| {\bf r} | w_{n{\bf 0}}({\bf r}) \rangle |^2
+$$
+
+The MV method
 minimises the gauge dependent spread $\tilde{\Omega}$ with respect the
 set of $\mathbf{U}^{(\mathbf{k})}$ to obtain MLWF.
 
@@ -52,7 +73,11 @@ structure calculation.
 
 1.  The overlaps between the cell periodic part of the Bloch states
     $|u_{n{\bf k}}\rangle$
-    $$M_{mn}^{(\bf{k,b})}=\langle u_{m{\bf k}}|u_{n{\bf k}+{\bf b}}\rangle,$$
+    
+    $$
+    M_{mn}^{(\bf{k,b})}=\langle u_{m{\bf k}}|u_{n{\bf k}+{\bf b}}\rangle,
+    $$
+
     where the vectors ${\bf b}$, which connect a given k-point with its
     neighbours, are determined by `wannier90` according to the
     prescription outlined in Ref. [@marzari-prb97].
@@ -60,19 +85,30 @@ structure calculation.
 2.  As a starting guess the projection of the Bloch states
     $|\psi_{n\bf{k}}\rangle$ onto trial localised orbitals
     $|g_{n}\rangle$
-    $$A_{mn}^{(\bf{k})}=\langle \psi_{m{\bf k}}|g_{n}\rangle,$$
+    
+    $$
+    A_{mn}^{(\bf{k})}=\langle \psi_{m{\bf k}}|g_{n}\rangle,
+    $$
 
 Note that $\mathbf{M}^{(\mathbf{k},\mathbf{b})}$,
 $\mathbf{A}^{(\mathbf{k})}$ and $\mathbf{U}^{(\mathbf{k})}$ are all
 small, $N \times N$ matrices[^1] that are independent of the basis set
 used to obtain the original Bloch states.
 
+
+[^1]: Technically, this is true for the case of an isolated group of $N$
+    bands from which we obtain $N$ MLWF. When using the disentanglement
+    procedure of Ref. [@souza-prb01], $\mathbf{A}^{(\mathbf{k})}$, for
+    example, is a rectangular matrix. See
+    Section [1.1](#sec:disentangle){reference-type="ref"
+    reference="sec:disentangle"}.
+
 To date, `wannier90` has been used in combination with electronic codes
 based on plane-waves and pseudopotentials (norm-conserving and
 ultrasoft [@vanderbilt-prb90]) as well as mixed basis set techniques
 such as FLAPW [@posternak-prb02].
 
-### Entangled Energy Bands {#sec:disentangle}
+### Entangled Energy Bands
 
 The above description is sufficient to obtain MLWF for an isolated set
 of bands, such as the valence states in an insulator. In order to obtain
@@ -84,14 +120,23 @@ $\bf{k}$, $N^{({\bf k})}_{{\rm win}}$ states lie within this energy
 window. We obtain a set of $N$ Bloch states by performing a unitary
 transformation amongst the Bloch states which fall within the energy
 window at each k-point:
-$$| u_{n{\bf k}}^{{\rm opt}}\rangle = \sum_{m\in N^{({\bf k})}_{{\rm win}}}
-U^{{\rm dis}({\bf k})}_{mn} | u_{m{\bf k}}\rangle$$ where
+
+$$
+| u_{n{\bf k}}^{{\rm opt}}\rangle = \sum_{m\in N^{({\bf k})}_{{\rm win}}}
+U^{{\rm dis}({\bf k})}_{mn} | u_{m{\bf k}}\rangle
+$$
+
+where
 $\bf{U}^{{\rm dis}({\bf k})}$ is a rectangular
 $N^{({\bf k})}_{{\rm win}} \times N$ matrix[^2]. The set of
 $\bf{U}^{{\rm dis}({\bf k})}$ are obtained by minimising the gauge
 invariant spread $\Omega_{{\rm I}}$ within the outer energy window. The
 MV procedure can then be used to minimise $\tilde{\Omega}$ and hence
 obtain MLWF for this optimal subspace.
+
+[^2]: As ${\bf U}^{{\rm dis}({\bf k})}$ is a rectangular matrix this is
+    a unitary operation in the sense that $({\bf U}^{{\rm
+     dis}({\bf k})})^{\dagger}{\bf U}^{{\rm dis}({\bf k})}={\bf 1}_N$.
 
 It should be noted that the energy bands of this optimal subspace may
 not correspond to any of the original energy bands (due to mixing

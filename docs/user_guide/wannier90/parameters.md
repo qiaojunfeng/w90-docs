@@ -1111,6 +1111,12 @@ XCrySDen), however, are only able to handle cube files for systems with
 of dealing with non-orthogonal lattice vectors is VESTA
 (<http://jp-minerals.org/vesta/en/>).[^3]
 
+[^3]: It's worth noting that another visualisation program, VMD
+    (<http://www.ks.uiuc.edu/Research/vmd>), is able to deal with
+    certain special cases of non-orthogonal lattice vectors; see
+    <http://www.ks.uiuc.edu/Research/vmd/plugins/molfile/cubeplugin.html>
+    for details.
+
 ### `character(len=20) :: wannier_plot_mode`
 
 Choose the mode in which to plot the WF, either as a molecule or as a
@@ -1305,6 +1311,11 @@ Instead of specifyfing a single Fermi energy, it is possible to scan the
 Fermi level over a range of values, and recompute certain quantities for
 each $\varepsilon_F$.[^4] This is the minimum value in the range (in
 eV).
+
+[^4]: Scanning the Fermi level is currently supported only by the
+    `postw90` module `berry`, for `berry_task=ahc,morb`. For all other
+    functionalities that require a knowledge of $\varepsilon_F$, use
+    `fermi_energy` instead.
 
 There is no default value.
 

@@ -455,6 +455,11 @@ A number of keywords may be specified in the `pw2wannier90` input file:
     of Bloch functions by a factor of 8. Default is `.false.` (only
     relevant if `write_unk=.true.`)[^5]
 
+[^5]: Note that there is a small bug with this feature in v3.2 (and
+    subsequent patches) of ` quantum-espresso`. Please use a later
+    version (if available) or the CVS version of `pw2wannier90.f90`,
+    which has been fixed.
+
 -   `wvfn_formatted` -- Set to `.true.` to write formatted
     wavefunctions. Default is `.false.` (only relevant if
     `write_unk=.true.`)

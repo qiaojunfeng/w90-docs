@@ -156,6 +156,9 @@ plugins:
   - git-committers:
       repository: qiaojunfeng/w90-docs
       branch: main
+  - search
+  - bibtex:
+      bib_file: "refs.bib"
 
 extra_javascript:
   - javascripts/katex.js
