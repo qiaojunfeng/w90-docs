@@ -1109,9 +1109,11 @@ non-orthogonal lattice vectors. Many visualisation programs (including
 XCrySDen), however, are only able to handle cube files for systems with
 *orthogonal* lattice vectors. One visualisation program that is capable
 of dealing with non-orthogonal lattice vectors is VESTA
-(<http://jp-minerals.org/vesta/en/>).[^3]
+(<http://jp-minerals.org/vesta/en/>).
 
-[^3]: It's worth noting that another visualisation program, VMD
+!!! note
+
+    It's worth noting that another visualisation program, VMD
     (<http://www.ks.uiuc.edu/Research/vmd>), is able to deal with
     certain special cases of non-orthogonal lattice vectors; see
     <http://www.ks.uiuc.edu/Research/vmd/plugins/molfile/cubeplugin.html>
@@ -1309,10 +1311,12 @@ The default value is 0.0
 
 Instead of specifyfing a single Fermi energy, it is possible to scan the
 Fermi level over a range of values, and recompute certain quantities for
-each $\varepsilon_F$.[^4] This is the minimum value in the range (in
+each $\varepsilon_F$. This is the minimum value in the range (in
 eV).
 
-[^4]: Scanning the Fermi level is currently supported only by the
+!!! note
+
+    Scanning the Fermi level is currently supported only by the
     `postw90` module `berry`, for `berry_task=ahc,morb`. For all other
     functionalities that require a knowledge of $\varepsilon_F$, use
     `fermi_energy` instead.

@@ -103,14 +103,16 @@ describe the content of the file. Then, there is a line for each energy
 $\varepsilon$ on the grid, containing a number of columns. The first
 column is the energy $\varepsilon$. The following is the DOS at the
 given energy $\varepsilon$. The DOS can either be calculated using the
-adaptive smearing scheme[^6] if `boltz_dos_adpt_smr` is `true`, or using
+adaptive smearing scheme (see the following note) if `boltz_dos_adpt_smr` is `true`, or using
 a "standard" fixed smearing, whose type and value are defined by
 `boltz_dos_smr_type` and `boltz_dos_smr_fixed_en_width`, respectively.
 If spin decomposition is required (input flag `spin_decomp`), further
 columns are printed, with the spin-up projection of the DOS, followed by
 spin-down projection.
 
-[^6]: Note that in `BoltzWann` the adaptive (energy) smearing scheme
+!!! note
+
+    Note that in `BoltzWann` the adaptive (energy) smearing scheme
     also implements a simple adaptive $k-$mesh scheme: if at any given
     $k$ point one of the band gradients is zero, then that $k$ point is
     replaced by 8 neighboring $k$ points. Thus, the final results for
