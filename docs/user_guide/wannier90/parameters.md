@@ -7,19 +7,19 @@ computation time.
 
 For serial execution use: `wannier90.x [-pp] [seedname]`
 
--    `seedname`: If a seedname string is given the code will read its
+- `seedname`: If a seedname string is given the code will read its
     input from a file `seedname.win`. The default value is `wannier`.
     One can also equivalently provide the string `seedname.win` instead
     of `seedname`.
 
--    `-pp`: This optional flag tells the code to generate a list of the
+- `-pp`: This optional flag tells the code to generate a list of the
     required overlaps and then exit. This information is written to the
     file `seedname.nnkp`.
 
 For parallel execution use:
 `mpirun -np NUMPROCS wannier90.x [-pp] [seedname]`
 
--   `NUMPROCS`: substitute with the number of processors that you want
+- `NUMPROCS`: substitute with the number of processors that you want
     to use.
 
 Note that the `mpirun` command and command-line flags may be different
@@ -43,13 +43,11 @@ treated as comments. Most keywords have a default value that is used
 unless the keyword is given in `seedname.win`. Keywords can be set in
 any of the following ways
 
-` `
-
-> num_wann 4
->
-> num_wann = 4
->
-> num_wann : 4
+```
+num_wann 4
+num_wann = 4
+num_wann : 4
+```
 
 A logical keyword can be set to `true` using any of the following
 strings: `T`, `true`, `.true.`.
@@ -59,8 +57,6 @@ reference="winfile"} and the the `wannier90` Tutorial.
 
 ## Keyword List
 
-::: center
-::: {#parameter_keywords1}
   ------------------- ------ ----------------------------------------------------------------------------------
         Keyword        Type  Description
                              
