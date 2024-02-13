@@ -6,6 +6,8 @@ site_description: >-
 
 repo_name: wannier-developers/wannier90
 repo_url: https://github.com/wannier-developers/wannier90
+edit_uri: https://github.com/qiaojunfeng/w90-docs/edit/main/docs
+view_uri: https://github.com/qiaojunfeng/w90-docs/raw/main/docs
 
 copyright: Copyright &copy; 2016 - 2024 Wannier90 Developers
 
