@@ -1,0 +1,5030 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Everything about wannier90...">
+      
+      
+        <meta name="author" content="Wannier90 Developers">
+      
+      
+      
+        <link rel="prev" href="../methodology/">
+      
+      
+        <link rel="next" href="../projections/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.9">
+    
+    
+      
+        <title>Parameters - Wannier90</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f2e4d321.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/timeago.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config",""),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#parameters" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Wannier90" class="md-header__button md-logo" aria-label="Wannier90" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Wannier90
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Parameters
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wannier-developers/wannier90" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wannier-developers/wannier90
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  User guide
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Wannier90" class="md-nav__button md-logo" aria-label="Wannier90" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    Wannier90
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wannier-developers/wannier90" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wannier-developers/wannier90
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    User guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            User guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    wannier90.x
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            wannier90.x
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../methodology/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Methodology
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Parameters
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Parameters
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seednamewin-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      seedname.win File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyword-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyword List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_wann" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_wann
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_bands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-lattice-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cell Lattice Vectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ionic-positions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ionic Positions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ionic Positions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cartesian-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cartesian coordinates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fractional-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fractional coordinates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-dimension-mp_grid3" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer, dimension :: mp_grid(3)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      K-points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-gamma_only" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: gamma_only
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-spinors" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: spinors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shells
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-shell_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: shell_list(:)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-search_shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: search_shells
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-skip_b1_tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: skip_B1_tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-dimension-5-nnkpts" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer, dimension(:, 5) :: nnkpts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-kmesh_tol" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: kmesh_tol
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Job Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-postproc_setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: postproc_setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-iprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: iprint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-optimisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: optimisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-length_unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: length_unit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen50-devel_flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=50) :: devel_flag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-exclude_bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: exclude_bands(:)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-select_projections" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: select_projections(:)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-auto_projections" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: auto_projections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-restart" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: restart
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-wvfn_formatted" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: wvfn_formatted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-spin" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: spin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-timing_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: timing_level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-translate_home_cell" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: translate_home_cell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_xyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_xyz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_vdw_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_vdw_data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disentanglement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disentanglement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disentanglement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_win_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_win_min
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_win_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_win_max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_froz_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_froz_min
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_froz_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_froz_max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-dis_froz_proj" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: dis_froz_proj
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_proj_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_proj_min
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_proj_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_proj_max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-dis_num_iter" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: dis_num_iter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_mix_ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_mix_ratio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_conv_tol" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_conv_tol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-dis_conv_window" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: dis_conv_window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-dis_spheres_num" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: dis_spheres_num
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-dis_spheres_first_wann" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: dis_spheres_first_wann
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dis_spheres" class="md-nav__link">
+    <span class="md-ellipsis">
+      dis_spheres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wannierise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wannierise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wannierise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_iter" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_iter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_cg_steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_cg_steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-conv_window" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: conv_window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-conv_tol" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: conv_tol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-precond" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: precond
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-conv_noise_amp" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: conv_noise_amp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-conv_noise_num" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: conv_noise_num
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_dump_cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_dump_cycles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_print_cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_print_cycles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_r2mn" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_r2mn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-guiding_centres" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: guiding_centres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_guide_cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_guide_cycles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_no_guide_iter" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_no_guide_iter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-trial_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: trial_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-fixed_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: fixed_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-use_bloch_phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: use_bloch_phases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-site_symmetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: site_symmetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-symmetrize_eps" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: symmetrize_eps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-slwf_num" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: slwf_num
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-slwf_constrain" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: slwf_constrain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-slwf_lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: slwf_lambda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sec:centre_constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constraints on centres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-wannier_plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: wannier_plot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-wannier_plot_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: wannier_plot_list(:)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-wannier_plot_supercell" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: wannier_plot_supercell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-wannier_plot_format" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: wannier_plot_format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-wannier_plot_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: wannier_plot_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-wannier_plot_radius" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: wannier_plot_radius
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-wannier_plot_scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: wannier_plot_scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-wannier_plot_spinor_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: wannier_plot_spinor_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-wannier_plot_spinor_phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: wannier_plot_spinor_phase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-bands_plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: bands_plot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpoint_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      kpoint_path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-bands_num_points" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: bands_num_points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-bands_plot_format" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: bands_plot_format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-bands_plot_project" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: bands_plot_project(:)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-bands_plot_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: bands_plot_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-bands_plot_dim" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: bands_plot_dim
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-fermi_surface_plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: fermi_surface_plot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-fermi_surface_num_points" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: fermi_surface_num_points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-fermi_energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: fermi_energy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-fermi_energy_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: fermi_energy_min
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-fermi_energy_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: fermi_energy_max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-fermi_energy_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: fermi_energy_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-fermi_surface_plot_format" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: fermi_surface_plot_format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_hr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_rmn" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_rmn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_bvec" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_bvec
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_tb" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_tb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: transport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-transport_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: transport_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-tran_win_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: tran_win_min
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-tran_win_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: tran_win_max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-tran_energy_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: tran_energy_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-fermi_energy_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: fermi_energy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_bb" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_bb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_ll" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_ll
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_rr" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_rr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_cc" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_cc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_lc" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_lc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_cr" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_cr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_cell_ll" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_cell_ll
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_cell_rr" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_cell_rr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_bandc" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_bandc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-tran_write_ht" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: tran_write_ht
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-tran_read_ht" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: tran_read_ht
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-tran_use_same_lead" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: tran_use_same_lead
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-tran_group_threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: tran_group_threshold
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-translation_centre_frac3" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: translation_centre_frac(3)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-use_ws_distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: use_ws_distance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-ws_distance_tol" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: ws_distance_tol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ws_search_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      :: ws_search_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_u_matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_u_matrices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-hr_cutoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: hr_cutoff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dist_cutoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dist_cutoff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-dist_cutoff_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: dist_cutoff_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-one_dim_axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: one_dim_axis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../code_overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../postproc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post-processing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../library_mode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Library mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transport/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notes_interpolations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Notes on interpolations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sample_inputs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sample inputs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    postw90.x
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            postw90.x
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postw90/berry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Berry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postw90/gyrotropic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gyrotropic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postw90/boltzwann/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BoltzWann
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../postw90/geninterp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Generic Band interpolation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Appendices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            Appendices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendices/utilities/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Utilities
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendices/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#seednamewin-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      seedname.win File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keyword-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Keyword List
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    <span class="md-ellipsis">
+      System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_wann" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_wann
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_bands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-lattice-vectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cell Lattice Vectors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ionic-positions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ionic Positions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ionic Positions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cartesian-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cartesian coordinates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fractional-coordinates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fractional coordinates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-dimension-mp_grid3" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer, dimension :: mp_grid(3)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#k-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      K-points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-gamma_only" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: gamma_only
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-spinors" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: spinors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shells
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-shell_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: shell_list(:)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-search_shells" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: search_shells
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-skip_b1_tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: skip_B1_tests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-dimension-5-nnkpts" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer, dimension(:, 5) :: nnkpts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-kmesh_tol" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: kmesh_tol
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projection
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#job-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Job Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-postproc_setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: postproc_setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-iprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: iprint
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-optimisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: optimisation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-length_unit" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: length_unit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen50-devel_flag" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=50) :: devel_flag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-exclude_bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: exclude_bands(:)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-select_projections" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: select_projections(:)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-auto_projections" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: auto_projections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-restart" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: restart
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-wvfn_formatted" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: wvfn_formatted
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-spin" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: spin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-timing_level" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: timing_level
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-translate_home_cell" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: translate_home_cell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_xyz" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_xyz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_vdw_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_vdw_data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disentanglement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disentanglement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disentanglement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_win_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_win_min
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_win_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_win_max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_froz_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_froz_min
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_froz_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_froz_max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-dis_froz_proj" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: dis_froz_proj
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_proj_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_proj_min
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_proj_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_proj_max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-dis_num_iter" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: dis_num_iter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_mix_ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_mix_ratio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dis_conv_tol" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dis_conv_tol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-dis_conv_window" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: dis_conv_window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-dis_spheres_num" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: dis_spheres_num
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-dis_spheres_first_wann" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: dis_spheres_first_wann
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dis_spheres" class="md-nav__link">
+    <span class="md-ellipsis">
+      dis_spheres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wannierise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wannierise
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wannierise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_iter" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_iter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_cg_steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_cg_steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-conv_window" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: conv_window
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-conv_tol" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: conv_tol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-precond" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: precond
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-conv_noise_amp" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: conv_noise_amp
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-conv_noise_num" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: conv_noise_num
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_dump_cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_dump_cycles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_print_cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_print_cycles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_r2mn" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_r2mn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-guiding_centres" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: guiding_centres
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_guide_cycles" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_guide_cycles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-num_no_guide_iter" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: num_no_guide_iter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-trial_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: trial_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-fixed_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: fixed_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-use_bloch_phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: use_bloch_phases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-site_symmetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: site_symmetry
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-symmetrize_eps" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: symmetrize_eps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-slwf_num" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: slwf_num
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-slwf_constrain" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: slwf_constrain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-slwf_lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: slwf_lambda
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sec:centre_constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constraints on centres
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Processing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post-Processing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#logical-wannier_plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: wannier_plot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-wannier_plot_list" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: wannier_plot_list(:)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-wannier_plot_supercell" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: wannier_plot_supercell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-wannier_plot_format" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: wannier_plot_format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-wannier_plot_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: wannier_plot_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-wannier_plot_radius" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: wannier_plot_radius
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-wannier_plot_scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: wannier_plot_scale
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-wannier_plot_spinor_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: wannier_plot_spinor_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-wannier_plot_spinor_phase" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: wannier_plot_spinor_phase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-bands_plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: bands_plot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kpoint_path" class="md-nav__link">
+    <span class="md-ellipsis">
+      kpoint_path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-bands_num_points" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: bands_num_points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-bands_plot_format" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: bands_plot_format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-bands_plot_project" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: bands_plot_project(:)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-bands_plot_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: bands_plot_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-bands_plot_dim" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: bands_plot_dim
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-fermi_surface_plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: fermi_surface_plot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-fermi_surface_num_points" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: fermi_surface_num_points
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-fermi_energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: fermi_energy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-fermi_energy_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: fermi_energy_min
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-fermi_energy_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: fermi_energy_max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-fermi_energy_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: fermi_energy_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-fermi_surface_plot_format" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: fermi_surface_plot_format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_hr" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_hr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_rmn" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_rmn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_bvec" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_bvec
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_tb" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_tb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-transport" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: transport
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-transport_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: transport_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-tran_win_min" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: tran_win_min
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-tran_win_max" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: tran_win_max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-tran_energy_step" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: tran_energy_step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-fermi_energy_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: fermi_energy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_bb" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_bb
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_ll" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_ll
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_rr" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_rr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_cc" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_cc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_lc" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_lc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_cr" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_cr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_cell_ll" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_cell_ll
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_cell_rr" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_cell_rr
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-tran_num_bandc" class="md-nav__link">
+    <span class="md-ellipsis">
+      integer :: tran_num_bandc
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-tran_write_ht" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: tran_write_ht
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-tran_read_ht" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: tran_read_ht
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-tran_use_same_lead" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: tran_use_same_lead
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-tran_group_threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: tran_group_threshold
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-translation_centre_frac3" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: translation_centre_frac(3)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-use_ws_distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: use_ws_distance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-ws_distance_tol" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: ws_distance_tol
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ws_search_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      :: ws_search_size
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logical-write_u_matrices" class="md-nav__link">
+    <span class="md-ellipsis">
+      logical :: write_u_matrices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-hr_cutoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: hr_cutoff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#realkinddp-dist_cutoff" class="md-nav__link">
+    <span class="md-ellipsis">
+      real(kind=dp) :: dist_cutoff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-dist_cutoff_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: dist_cutoff_mode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characterlen20-one_dim_axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      character(len=20) :: one_dim_axis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/qiaojunfeng/w90-docs/edit/main/docs/user_guide/wannier90/parameters.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/qiaojunfeng/w90-docs/raw/main/docs/user_guide/wannier90/parameters.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h1>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p><code>wannier90.x</code> can be run in parallel using MPI libraries to reduce the
+computation time.</p>
+<p>For serial execution use: <code>wannier90.x [-pp] [seedname]</code></p>
+<ul>
+<li>
+<p><code>seedname</code>: If a seedname string is given the code will read its
+    input from a file <code>seedname.win</code>. The default value is <code>wannier</code>.
+    One can also equivalently provide the string <code>seedname.win</code> instead
+    of <code>seedname</code>.</p>
+</li>
+<li>
+<p><code>-pp</code>: This optional flag tells the code to generate a list of the
+    required overlaps and then exit. This information is written to the
+    file <code>seedname.nnkp</code>.</p>
+</li>
+</ul>
+<p>For parallel execution use:
+<code>mpirun -np NUMPROCS wannier90.x [-pp] [seedname]</code></p>
+<ul>
+<li><code>NUMPROCS</code>: substitute with the number of processors that you want
+    to use.</li>
+</ul>
+<p>Note that the <code>mpirun</code> command and command-line flags may be different
+in your MPI implementation: read your MPI manual or ask your computer
+administrator.</p>
+<p>Note also that this requires that the <code>wannier90.x</code> executable has been
+compiled in its parallel version (follow the instructions in the file
+<code>README.install</code> in the main directory of the wannier90 distribution)
+and that the MPI libraries and binaries are installed and correctly
+configured on your machine.</p>
+<h2 id="seednamewin-file"><code>seedname.win</code> File<a class="headerlink" href="#seednamewin-file" title="Permanent link">&para;</a></h2>
+<p>The <code>wannier90</code> input file <code>seedname.win</code> has a flexible free-form
+structure.</p>
+<p>The ordering of the keywords is not significant. Case is ignored (so
+<code>num_bands</code> is the same as <code>Num_Bands</code>). Characters after !, or # are
+treated as comments. Most keywords have a default value that is used
+unless the keyword is given in <code>seedname.win</code>. Keywords can be set in
+any of the following ways</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>num_wann 4
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>num_wann = 4
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>num_wann : 4
+</span></code></pre></div>
+<p>A logical keyword can be set to <code>true</code> using any of the following
+strings: <code>T</code>, <code>true</code>, <code>.true.</code>.</p>
+<p>For further examples see Section <a href="#winfile">10.1</a>{reference-type="ref"
+reference="winfile"} and the the <code>wannier90</code> Tutorial.</p>
+<h2 id="keyword-list">Keyword List<a class="headerlink" href="#keyword-list" title="Permanent link">&para;</a></h2>
+<hr />
+<div class="language-text highlight"><pre><span></span><code>    Keyword        Type  Description
+</code></pre></div>
+<p>System Parameters       <br />
+       num_wann         I    Number of WF
+       num_bands        I    Number of bands passed to the code
+    unit_cell_cart      P    Unit cell vectors in Cartesian coordinates
+     atoms_cart *      P    Positions of atoms in Cartesian coordinates
+     atoms_frac *      R    Positions of atoms in fractional coordinates with respect to the lattice vectors
+        mp_grid         I    Dimensions of the Monkhorst-Pack grid of k-points
+        kpoints         R    List of k-points in the Monkhorst-Pack grid
+      gamma_only        L    Wavefunctions from underlying ab initio calculation are manifestly real
+        spinors         L    WF are spinors
+      shell_list        I    Which shells to use in finite difference formula
+     search_shells      I    The number of shells to search when determining finite difference formula
+     skip_B1_tests      L    Check the condition B1 of Ref. <sup id="fnref:ref1"><a class="footnote-ref" href="#fn:ref1">1</a></sup>
+        nnkpts          I    Explicit list of nearest-neighbour k-points.
+       kmesh_tol        R    The tolerance to control if two kpoint belong to the same shell</p>
+<hr />
+<dl>
+<dd><code>seedname.win</code> file keywords defining the system. Argument types are
+  represented by, I for a integer, R for a real number, P for a physical
+  value, L for a logical value and S for a text string.\
+  * atoms_cart and atoms_frac may not both be defined in the same input
+  file.
+:::
+:::</dd>
+</dl>
+<p>::: center
+::: {#parameter_keywords2}</p>
+<hr />
+<div class="language-text highlight"><pre><span></span><code>     Keyword          Type  Description
+
+   Job Control              
+  postproc_setup       L    To output the `seedname.nnkp` file
+  exclude_bands        I    List of bands to exclude from the calculation
+select_projections     I    List of projections to use in Wannierisation
+ auto_projections      L    To automatically generate initial projections
+     restart           S    Restart from checkpoint file
+      iprint           I    Output verbosity level
+   length_unit         S    System of units to output lengths
+  wvfn_formatted       L    Read the wavefunctions from a (un)formatted file
+       spin            S    Which spin channel to read
+    devel_flag         S    Flag for development use
+   timing_level        I    Determines amount of timing information written to output
+   optimisation        I    Optimisation level
+</code></pre></div>
+<p>translate_home_cell     L    To translate final Wannier centres to home unit cell when writing xyz file
+        write_xyz          L    To write atomic positions and final centres in xyz file format
+      write_vdw_data       L    To write data for futher processing by w90vdw utility
+      write_hr_diag        L    To write the diagonal elements of the Hamiltonian in the Wannier basis to seedname.wout (in eV)</p>
+<hr />
+<dl>
+<dd><code>seedname.win</code> file keywords defining job control. Argument types
+  are represented by, I for a integer, R for a real number, P for a
+  physical value, L for a logical value and S for a text string.
+  translate_home_cell only relevant if write_xyz is <code>.true.</code>
+:::
+:::</dd>
+</dl>
+<p>::: center
+::: {#parameter_keywords4}</p>
+<hr />
+<div class="language-text highlight"><pre><span></span><code>        Keyword             Type  Description
+</code></pre></div>
+<p>Disentanglement Parameters       <br />
+          dis_win_min            P    Bottom of the outer energy window
+          dis_win_max            P    Top of the outer energy window
+          dis_froz_min           P    Bottom of the inner (frozen) energy window
+          dis_froz_max           P    Top of the inner (frozen) energy window
+         dis_froz_proj           L    To activate projectability disentanglement
+          dis_proj_min           P    Lower threshold for projectability disentanglement
+          dis_proj_max           P    Upper threshold for projectability disentanglement
+          dis_num_iter           I    Number of iterations for the minimisation of <span class="arithmatex">\(\Omega_{\mathrm{I}}\)</span>
+         dis_mix_ratio           R    Mixing ratio during the minimisation of <span class="arithmatex">\(\Omega_{\mathrm{I}}\)</span>
+          dis_conv_tol           R    The convergence tolerance for finding <span class="arithmatex">\(\Omega_{\mathrm{I}}\)</span>
+        dis_conv_window          I    The number of iterations over which convergence of <span class="arithmatex">\(\Omega_{\mathrm{I}}\)</span> is assessed.
+        dis_spheres_num          I    Number of spheres in k-space where disentaglement is performed
+     dis_spheres_first_wann      I    Index of the first band to be considered a Wannier function
+          dis_spheres            R    List of centres and radii, for disentanglement only in spheres</p>
+<hr />
+<dl>
+<dd><code>seedname.win</code> file keywords controlling the disentanglement.
+  Argument types are represented by, I for a integer, R for a real
+  number, P for a physical value, L for a logical value and S for a text
+  string.
+:::
+:::</dd>
+</dl>
+<p>::: center
+::: {#parameter_keywords5}</p>
+<hr />
+<div class="language-text highlight"><pre><span></span><code>      Keyword          Type  Description
+</code></pre></div>
+<p>Wannierise Parameters       <br />
+         num_iter           I    Number of iterations for the minimisation of <span class="arithmatex">\(\Omega\)</span>
+       num_cg_steps         I    During the minimisation of <span class="arithmatex">\(\Omega\)</span> the number of Conjugate Gradient steps before resetting to Steepest Descents
+        conv_window         I    The number of iterations over which convergence of <span class="arithmatex">\(\Omega\)</span> is assessed
+         conv_tol           P    The convergence tolerance for finding <span class="arithmatex">\(\Omega\)</span>
+          precond           L    Use preconditioning
+      conv_noise_amp        R    The amplitude of random noise applied towards end of minimisation procedure
+      conv_noise_num        I    The number of times random noise is applied
+      num_dump_cycles       I    Control frequency of check-pointing
+     num_print_cycles       I    Control frequency of printing
+        write_r2mn          L    Write matrix elements of <span class="arithmatex">\(r^2\)</span> between WF to file
+      guiding_centres       L    Use guiding centres
+     num_guide_cycles       I    Frequency of guiding centres
+     num_no_guide_iter      I    The number of iterations after which guiding centres are used
+       trial_step *        R    The trial step length for the parabolic line search during the minimisation of <span class="arithmatex">\(\Omega\)</span>
+       fixed_step *        R    The fixed step length to take during the minimisation of <span class="arithmatex">\(\Omega\)</span>, instead of doing a parabolic line search
+   use_bloch_phases **    L    To use phases for initial projections
+    site_symmetry***     L    To construct symmetry-adapted Wannier functions
+   symmetrize_eps***     R    The convergence tolerance used in the symmetry-adapted mode
+         slwf_num           I    The number of objective WFs for selective localization
+      slwf_constrain        L    Whether to constrain the centres of the objective WFs
+        slwf_lambda         R    Value of the Lagrange multiplier for constraining the objective WFs
+       slwf_centres         P    The centres to which the objective WFs are to be constrained</p>
+<hr />
+<dl>
+<dd><code>seedname.win</code> file keywords controlling the wannierisation.
+  Argument types are represented by, I for a integer, R for a real
+  number, P for a physical value, L for a logical value and S for a text
+  string. * fixed_step and trial_step may not both be defined in the
+  same input file. **Cannot be used in conjunction with
+  disentanglement. ***Cannot be used in conjunction with the inner
+  (frozen) energy window.
+:::
+:::</dd>
+</dl>
+<p>::: {#parameter_keywords6}</p>
+<hr />
+<div class="language-text highlight"><pre><span></span><code>               Keyword                    Type  Description
+
+           Plot Parameters                      
+             wannier_plot                  L    Plot the WF
+          wannier_plot_list                I    List of WF to plot
+        wannier_plot_supercell             I    Size of the supercell for plotting the WF
+         wannier_plot_format               S    File format in which to plot the WF
+          wannier_plot_mode                S    Mode in which to plot the WF, molecule or crystal
+         wannier_plot_radius               R    Cut-off radius of WF\*
+          wannier_plot_scale               R    Scaling parameter for cube files
+       wannier_plot_spinor_mode            S    Quantity to plot for spinor WF
+      wannier_plot_spinor_phase            L    Include the &quot;phase&quot; when plotting spinor WF
+              bands_plot                   L    Plot interpolated band structure
+             kpoint_path                   P    K-point path for the interpolated band structure
+           bands_num_points                I    Number of points along the first section of the k-point path
+          bands_plot_format                S    File format in which to plot the interpolated bands
+          bands_plot_project               I    WF to project the band structure onto
+           bands_plot_mode                 S    Slater-Koster type interpolation or Hamiltonian cut-off
+            bands_plot_dim                 I    Dimension of the system
+          fermi_surface_plot               L    Plot the Fermi surface
+       fermi_surface_num_points            I    Number of points in the Fermi surface plot
+             fermi_energy                  P    The Fermi energy
+           fermi_energy_min                P    Lower limit of the Fermi energy range
+           fermi_energy_max                P    Upper limit of the Fermi energy range
+          fermi_energy_step                R    Step for increasing the Fermi energy in the specified range
+      fermi_surface_plot_format            S    File format for the Fermi surface plot
+    [hr_plot]{style=&quot;color: red&quot;}          L    [This parameter is not used anymore. Use write_hr instead.]{style=&quot;color: red&quot;}
+   [write_hr]{style=&quot;color: blue&quot;}         L    [Write the Hamiltonian in the WF basis]{style=&quot;color: blue&quot;}
+  [write_rmn ]{style=&quot;color: blue&quot;}        L    [Write the position operator in the WF basis]{style=&quot;color: blue&quot;}
+  [write_bvec ]{style=&quot;color: blue&quot;}       L    [Write to file the matrix elements of the bvectors and their weights]{style=&quot;color: blue&quot;}
+   [write_tb ]{style=&quot;color: blue&quot;}        L    [Write lattice vectors, Hamiltonian, and position operator in WF basis]{style=&quot;color: blue&quot;}
+              hr_cutoff                    P    Cut-off for the absolute value of the Hamiltonian
+             dist_cutoff                   P    Cut-off for the distance between WF
+           dist_cutoff_mode                S    Dimension in which the distance between WF is calculated
+       translation_centre_frac             R    Centre of the unit cell to which final WF are translated
+</code></pre></div>
+<p>[use_ws_distance ]{style="color: blue"}     L    [Improve interpolation using minimum distance between WFs, see Chap. <a href="#chap:interpolation" reference="chap:interpolation" reference-type="ref">[chap:interpolation]</a>]{style="color: blue"}
+   [ws_distance_tol ]{style="color: blue"}     R    [Absolute tolerance for the distance to equivalent positions.]{style="color: blue"}
+    [ws_search_size ]{style="color: blue"}     I    [Maximum extension in each direction of the super-cell of the Born-von Karmann cell to search for points inside the Wigner-Seitz cell]{style="color: blue"}
+   [write_u_matrices ]{style="color: blue"}    L    [Write <span class="arithmatex">\(\mathbf{U}^{(\mathbf{k})}\)</span> and <span class="arithmatex">\(\mathbf{U}^{\mathrm{dis}(\mathbf{k})}\)</span> matrices to files]{style="color: blue"}</p>
+<hr />
+<dl>
+<dd><code>seedname.win</code> file keywords controlling the plotting. Argument
+  types are represented by, I for a integer, R for a real number, P for
+  a physical value, L for a logical value and S for a text string. *
+  Only applies when wannier_plot_format is <code>cube</code>.
+:::</dd>
+</dl>
+<p>::: center
+::: {#parameter_keywords7}</p>
+<hr />
+<div class="language-text highlight"><pre><span></span><code>       Keyword            Type  Description
+
+ Transport Parameters           
+      transport            L    Calculate quantum conductance and density of states
+    transport_mode         S    Bulk or left-lead_conductor_right-lead calculation
+     tran_win_min          P    Bottom of the energy window for transport calculation
+     tran_win_max          P    Top of the energy window for transport calculation
+   tran_energy_step        R    Sampling interval of the energy values
+     fermi_energy          R    The Fermi energy
+     tran_num_bb           I    Size of a bulk Hamiltonian
+     tran_num_ll           I    Size of a left-lead Hamiltonian
+     tran_num_rr           I    Size of a right-lead Hamiltonian
+     tran_num_cc           I    Size of a conductor Hamiltonian
+     tran_num_lc           I    Number of columns in a left-lead_conductor Hamiltonian
+     tran_num_cr           I    Number of rows in a conductor_right-lead Hamiltonian
+   tran_num_cell_ll        I    Number of unit cells in PL of left lead
+   tran_num_cell_rr        I    Number of unit cells in PL of right lead
+    tran_num_bandc         I    Half-bandwidth+1 of a band-diagonal conductor Hamiltonian
+    tran_write_ht          L    Write the Hamiltonian for transport calculation
+     tran_read_ht          L    Read the Hamiltonian for transport calculation
+  tran_use_same_lead       L    Left and right leads are the same
+ tran_group_threshold      R    Distance that determines the grouping of WFs
+      hr_cutoff            P    Cut-off for the absolute value of the Hamiltonian
+     dist_cutoff           P    Cut-off for the distance between WF
+   dist_cutoff_mode        S    Dimension in which the distance between WF is calculated
+     one_dim_axis          S    Extended direction for a one-dimensional system
+</code></pre></div>
+<p>translation_centre_frac     R    Centre of the unit cell to which final WF are translated</p>
+<hr />
+<dl>
+<dd><code>seedname.win</code> file keywords controlling transport. Argument types
+  are represented by, I for a integer, R for a real number, P for a
+  physical value, L for a logical value and S for a text string.
+:::
+:::</dd>
+</dl>
+<h2 id="system">System<a class="headerlink" href="#system" title="Permanent link">&para;</a></h2>
+<h3 id="integer-num_wann"><code>integer :: num_wann</code><a class="headerlink" href="#integer-num_wann" title="Permanent link">&para;</a></h3>
+<p>Number of WF to be found.</p>
+<p>No default.</p>
+<h3 id="integer-num_bands"><code>integer :: num_bands</code><a class="headerlink" href="#integer-num_bands" title="Permanent link">&para;</a></h3>
+<p>Total number of bands passed to the code in the <code>seedname.mmn</code> file.</p>
+<p>Default <code>num_bands</code>=<code>num_wann</code></p>
+<h3 id="cell-lattice-vectors">Cell Lattice Vectors<a class="headerlink" href="#cell-lattice-vectors" title="Permanent link">&para;</a></h3>
+<p>The cell lattice vectors should be specified in Cartesian coordinates.</p>
+<p><code>begin unit_cell_cart</code>\
+<code>[units]</code> <span class="arithmatex">\(<span class="arithmatex">\(\begin{array}{ccc}
+A_{1x} &amp; A_{1y} &amp; A_{1z} \\
+A_{2x} &amp; A_{2y} &amp; A_{2z} \\
+A_{3x} &amp; A_{3y} &amp; A_{3z}
+\end{array}\)</span>\)</span> <code>end unit_cell_cart</code></p>
+<p>Here <span class="arithmatex">\(A_{1x}\)</span> is the <span class="arithmatex">\(x\)</span>-component of the first lattice vector
+<span class="arithmatex">\(\mathbf{A}_1\)</span>, <span class="arithmatex">\(A_{2y}\)</span> is the <span class="arithmatex">\(y\)</span>-component of the second lattice
+vector <span class="arithmatex">\(\mathbf{A}_2\)</span>, etc.</p>
+<p><code>[units]</code> specifies the units in which the lattice vectors are defined:
+either <code>Bohr</code> or <code>Ang</code>.</p>
+<p>The default value is <code>Ang</code>.</p>
+<h3 id="ionic-positions">Ionic Positions<a class="headerlink" href="#ionic-positions" title="Permanent link">&para;</a></h3>
+<p>The ionic positions may be specified in fractional coordinates relative
+to the lattice vectors of the unit cell, or in absolute Cartesian
+coordinates. Only one of <code>atoms_cart</code> and <code>atoms_frac</code> may be given in
+the input file.</p>
+<h4 id="cartesian-coordinates">Cartesian coordinates<a class="headerlink" href="#cartesian-coordinates" title="Permanent link">&para;</a></h4>
+<p><code>begin atoms_cart</code>\
+<code>[units]</code> <span class="arithmatex">\(<span class="arithmatex">\(\begin{array}{cccc}
+P  &amp; R^{P}_{x} &amp; R^{P}_{y} &amp; R^{P}_{z} \\
+Q  &amp; R^{Q}_{x} &amp; R^{Q}_{y} &amp; R^{Q}_{z} \\
+\vdots
+\end{array}\)</span>\)</span> <code>end atoms_cart</code></p>
+<p>The first entry on a line is the atomic symbol. The next three entries
+are the atom's position <span class="arithmatex">\(\mathbf{R}=(R_x , R_y, R_z)\)</span> in Cartesian
+coordinates. The first line of the block, <code>[units]</code>, specifies the units
+in which the coordinates are given and can be either <code>bohr</code> or <code>ang</code>. If
+not present, the default is <code>ang</code>.</p>
+<h4 id="fractional-coordinates">Fractional coordinates<a class="headerlink" href="#fractional-coordinates" title="Permanent link">&para;</a></h4>
+<p><code>begin atoms_frac</code> <span class="arithmatex">\(<span class="arithmatex">\(\begin{array}{cccc}
+P  &amp; F^{P}_{1} &amp; F^{P}_{2} &amp; F^{P}_{3} \\
+Q  &amp; F^{Q}_{1} &amp; F^{Q}_{2} &amp; F^{Q}_{3} \\
+\vdots
+\end{array}\)</span>\)</span> <code>end atoms_frac</code></p>
+<p>The first entry on a line is the atomic symbol. The next three entries
+are the atom's position in fractional coordinates <span class="arithmatex">\(\mathbf{F} = F_1
+\mathbf{A}_{1} + F_2 \mathbf{A}_{2} + F_3 \mathbf{A}_{3}\)</span> relative to
+the cell lattice vectors <span class="arithmatex">\(\mathbf{A}_i\)</span>, <span class="arithmatex">\(i\in [1,3]\)</span>.</p>
+<h3 id="integer-dimension-mp_grid3"><code>integer, dimension :: mp_grid(3)</code><a class="headerlink" href="#integer-dimension-mp_grid3" title="Permanent link">&para;</a></h3>
+<p>Dimensions of the regular (Monkhorst-Pack) k-point mesh. For example,
+for a <span class="arithmatex">\(2\times2\times2\)</span> grid:</p>
+<p><code>mp_grid : 2  2  2</code></p>
+<p>No default.</p>
+<h3 id="k-points">K-points<a class="headerlink" href="#k-points" title="Permanent link">&para;</a></h3>
+<p>Each line gives the coordinate <span class="arithmatex">\(\mathbf{K}=K_1 \mathbf{B}_{1} + K_2
+\mathbf{B}_{2} + K_3 \mathbf{B}_3\)</span> of a k-point in relative
+(crystallographic) units, i.e., in fractional units with respect to the
+primitive reciprocal lattice vectors <span class="arithmatex">\(\mathbf{B}_{i}\)</span>, <span class="arithmatex">\(i \in [1,3]\)</span>.
+The position of each k-point in this list assigns its numbering; the
+first k-point is k-point 1, the second is k-point 2, and so on.</p>
+<p><code>begin kpoints</code>\
+<span class="arithmatex">\(<span class="arithmatex">\(\begin{array}{ccc}
+ K^{1}_{1} &amp; K^{1}_{2} &amp; K^{1}_{3} \\
+ K^{2}_{1} &amp; K^{2}_{2} &amp; K^{2}_{3} \\
+\vdots
+\end{array}\)</span>\)</span> <code>end kpoints</code></p>
+<p>There is no default.</p>
+<p><strong>Note</strong>: There is an utility provided with <code>wannier90</code>, called
+<code>kmesh.pl</code>, which helps to generate the explicit list of <span class="arithmatex">\(k\)</span> points
+required by <code>wannier90</code>. See Sec. <a href="#sec:kmesh">1.1</a>{reference-type="ref"
+reference="sec:kmesh"}.</p>
+<h3 id="logical-gamma_only"><code>logical :: gamma_only</code><a class="headerlink" href="#logical-gamma_only" title="Permanent link">&para;</a></h3>
+<p>If <code>gamma_only=true</code>, then <code>wannier90</code> uses a branch of algorithms for
+disentanglement and localisation that exploit the fact that the Bloch
+eigenstates obtained from the underlying ab initio calculation are
+manifestly real. This can be the case when only the <span class="arithmatex">\(\Gamma\)</span>-point is
+used to sample the Brillouin zone. The localisation procedure that is
+used in the <span class="arithmatex">\(\Gamma\)</span>-only branch is based on the method of
+Ref. <sup id="fnref:ref2"><a class="footnote-ref" href="#fn:ref2">2</a></sup>.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="logical-spinors"><code>logical :: spinors</code><a class="headerlink" href="#logical-spinors" title="Permanent link">&para;</a></h3>
+<p>If <code>spinors=true</code>, then <code>wannier90</code> assumes that the WF correspond to
+singularly occupied spinor states and <code>num_elec_per_state=1</code>.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="shells">Shells<a class="headerlink" href="#shells" title="Permanent link">&para;</a></h3>
+<p>The MV scheme requires a finite difference expression for
+<span class="arithmatex">\(\nabla_{\bf k}\)</span> defined on a uniform Monkhorst-Pack mesh of k-points.
+The vectors <span class="arithmatex">\(\{{\bf b}\}\)</span> connect each mesh-point <span class="arithmatex">\({\bf k}\)</span> to its
+nearest neighbours. <span class="arithmatex">\(N_{\mathrm{sh}}\)</span> shells of neighbours are included
+in the finite-difference formula, with <span class="arithmatex">\(M_s\)</span> vectors in the
+<span class="arithmatex">\(s^{\mathrm{th}}\)</span> shell. For <span class="arithmatex">\(\nabla_{{\bf k}}\)</span> to be correct to linear
+order, we require that the following equation is satisfied (Eq. B1 of
+Ref. <sup id="fnref2:ref1"><a class="footnote-ref" href="#fn:ref1">1</a></sup>): <span class="arithmatex">\(<span class="arithmatex">\(\label{eq:B1}
+\sum_{s}^{N_{\mathrm{sh}}} w_s \sum_i^{M_{\mathrm{s}}}
+b_{\alpha}^{i,s} b_{\beta}^{i,s} = \delta_{\alpha\beta}\:,\)</span>\)</span> where
+<span class="arithmatex">\({\bf b}^{i,s}\)</span>, <span class="arithmatex">\(i\in[1,M_s]\)</span>, is the <span class="arithmatex">\(i^{\mathrm{th}}\)</span> vector
+belonging to the <span class="arithmatex">\(s^{\mathrm{th}}\)</span> shell with associated weight <span class="arithmatex">\(w_s\)</span>,
+and <span class="arithmatex">\(\alpha\)</span> and <span class="arithmatex">\(\beta\)</span> run over the three Cartesian indices.</p>
+<h3 id="integer-shell_list"><code>integer :: shell_list(:)</code><a class="headerlink" href="#integer-shell_list" title="Permanent link">&para;</a></h3>
+<p><code>shell_list</code> is vector listing the shells to include in the finite
+difference expression. If this keyword is absent, the shells are chosen
+automatically.</p>
+<h3 id="integer-search_shells"><code>integer :: search_shells</code><a class="headerlink" href="#integer-search_shells" title="Permanent link">&para;</a></h3>
+<p>Specifies the number of shells of neighbours over which to search in
+attempting to determine an automatic solution to the B1 condition
+Eq. <a href="#eq:B1" reference="eq:B1" reference-type="ref">[eq:B1]</a>. Larger
+values than the default may be required in special cases e.g. for very
+long thin unit cells.</p>
+<p>The default value is 36.</p>
+<h3 id="logical-skip_b1_tests"><code>logical :: skip_B1_tests</code><a class="headerlink" href="#logical-skip_b1_tests" title="Permanent link">&para;</a></h3>
+<p>If set to <code>.true.</code>, does not check the B1 condition
+Eq. <a href="#eq:B1" reference="eq:B1" reference-type="ref">[eq:B1]</a>. This
+should <em>only</em> be used if one knows why the B1 condition should not be
+verified. A typical use of this flag is in conjunction with the Z2PACK
+code: <a href="http://www.physics.rutgers.edu/z2pack/">http://www.physics.rutgers.edu/z2pack/</a>.</p>
+<p>The default value is <code>.false.</code>.</p>
+<h3 id="integer-dimension-5-nnkpts"><code>integer, dimension(:, 5) :: nnkpts</code><a class="headerlink" href="#integer-dimension-5-nnkpts" title="Permanent link">&para;</a></h3>
+<p>Specifies the nearest-neighbour k-points which are written to the
+<code>.nnkp</code> file. This can be used to explicitly specify which overlap
+matrices should be calculated.</p>
+<div class="language-text highlight"><pre><span></span><code>begin nnkpts
+1   2   0  0  0
+.
+.
+end nnkpts
+</code></pre></div>
+<p>Each nearest neighbour <span class="arithmatex">\(\mathbf{k + b}\)</span> is given by a line of 5
+integers. The first specifies the k-point number <code>nkp</code> of <span class="arithmatex">\(\mathbf{k}\)</span>.
+The second is the k-point number of the neighbour. The final three
+integers specify the reciprocal lattice vector which brings the k-point
+specified by the second integer to <span class="arithmatex">\(\mathbf{k + b}\)</span>.</p>
+<p>This format is the same as in the <code>.nnkp</code> file, except that the number
+of neighbours per k-point is not specified. However, the number of
+neighbours still needs to be a multiple of the number of k-points.</p>
+<p>This input parameter can be used only if <code>postproc_setup = .true.</code>, and
+is not intended to be used with a full Wannier90 run. It can be used
+also if the k-points do not describe a regular mesh.</p>
+<h3 id="realkinddp-kmesh_tol"><code>real(kind=dp) :: kmesh_tol</code><a class="headerlink" href="#realkinddp-kmesh_tol" title="Permanent link">&para;</a></h3>
+<p>Two kpoints belong to the same shell if the distance between them is
+less than <code>kmesh_tol</code>. Units are Ang.</p>
+<p>The default value is 0.000001 Ang.</p>
+<h2 id="projection">Projection<a class="headerlink" href="#projection" title="Permanent link">&para;</a></h2>
+<p>The projections block defines a set of localised functions used to
+generate an initial guess for the unitary transformations. This data
+will be written in the <code>seedname.nnkp</code> file to be used by a
+first-principles code.</p>
+<p><code>begin projections</code>\
+.\
+.\
+<code>end projections</code></p>
+<p>If <code>guiding_centres</code>=<code>true</code>, then the projection centres are used as the
+guiding centres in the Wannierisation routine.</p>
+<p>For details see Section <a href="#sec:proj">3.1</a>{reference-type="ref"
+reference="sec:proj"}.</p>
+<h2 id="job-control">Job Control<a class="headerlink" href="#job-control" title="Permanent link">&para;</a></h2>
+<h3 id="logical-postproc_setup"><code>logical :: postproc_setup</code><a class="headerlink" href="#logical-postproc_setup" title="Permanent link">&para;</a></h3>
+<p>If <code>postproc_setup</code>=<code>true</code>, then the wannier code will write
+<code>seedname.nnkp</code> file and exit. If <code>wannier90</code> is called with the option
+<code>-pp</code>, then <code>postproc_setup</code> is set to <code>true</code>, over-riding its value in
+the <code>seedname.win</code> file.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="integer-iprint"><code>integer :: iprint</code><a class="headerlink" href="#integer-iprint" title="Permanent link">&para;</a></h3>
+<p>This indicates the level of verbosity of the output from 0 ("low"), the
+bare minimum, to 3 ("high"), which corresponds to full debugging output.</p>
+<p>The default value is 1.</p>
+<h3 id="integer-optimisation"><code>integer :: optimisation</code><a class="headerlink" href="#integer-optimisation" title="Permanent link">&para;</a></h3>
+<p>This indicates the level of optimisation used in the code. This is a
+trade between speed and memory. A positive number indicates fastest
+execution time at the cost of more memory. Zero or negative numbers
+indicates a smaller memory footprint - at increased execution time.</p>
+<p>At the moment the only values that have an effect are <code>optimisation&lt;=0</code>
+(low memory) and <code>optimisation&gt;0</code> (fast)</p>
+<p>The default value is 3.</p>
+<h3 id="characterlen20-length_unit"><code>character(len=20) :: length_unit</code><a class="headerlink" href="#characterlen20-length_unit" title="Permanent link">&para;</a></h3>
+<p>The length unit to be used for writing quantities in the output file
+<code>seedname.wout</code>.</p>
+<p>The valid options for this parameter are:</p>
+<ul>
+<li>
+<p><code>Ang</code> (default)</p>
+</li>
+<li>
+<p><code>Bohr</code></p>
+</li>
+</ul>
+<h3 id="characterlen50-devel_flag"><code>character(len=50) :: devel_flag</code><a class="headerlink" href="#characterlen50-devel_flag" title="Permanent link">&para;</a></h3>
+<p>Not a regular keyword. Its purpose is to allow a developer to pass a
+string into the code to be used inside a new routine as it is developed.</p>
+<p>No default.</p>
+<h3 id="integer-exclude_bands"><code>integer :: exclude_bands(:)</code><a class="headerlink" href="#integer-exclude_bands" title="Permanent link">&para;</a></h3>
+<p>A k-point independent list of states to excluded from the calculation of
+the overlap matrices; for example to select only valence states, or
+ignore semi-core states. This keyword is passed to the first-principles
+code via the <code>seedname.nnkp</code> file. For example, to exclude bands 2, 6,
+7, 8 and 12:</p>
+<p><code>exclude_bands : 2, 6-8, 12</code></p>
+<h3 id="integer-select_projections"><code>integer :: select_projections(:)</code><a class="headerlink" href="#integer-select_projections" title="Permanent link">&para;</a></h3>
+<p>A list of projections to be included in the wannierisation procedure. In
+the case that <code>num_proj</code> is greater than <code>num_wann</code>, this keyword allows
+a subset of the projections in the projection matrices to be used. For
+example, to select the projections given by the indices 2, 6, 7, 8 and
+12:</p>
+<p><code>select_projections : 2, 6-8, 12</code></p>
+<h3 id="logical-auto_projections"><code>logical :: auto_projections</code><a class="headerlink" href="#logical-auto_projections" title="Permanent link">&para;</a></h3>
+<p>If <code>.true.</code> and no projections block is defined, then <code>wannier90</code> writes
+an additional block in the <code>.nnkp</code> file during the pre-processing step,
+to instruct the interface code to automatically generate the
+<span class="arithmatex">\(A_{mn}^{(\mathbf{k})}\)</span>.</p>
+<p>For additional information on the behavior and on the added block, see
+Sec. <a href="#sec:auto-projections-block">[sec:auto-projections-block]</a>{reference-type="ref"
+reference="sec:auto-projections-block"}.</p>
+<p><strong>Note:</strong> the interface code (e.g. <code>pw2wannier90.x</code>) must have at least
+one implementation of a method to automatically generate initial
+projections in order for this option to be usable.</p>
+<p>The default value of this parameter is <span class="arithmatex">\(\verb#false#\)</span>.</p>
+<h3 id="characterlen20-restart"><code>character(len=20) :: restart</code><a class="headerlink" href="#characterlen20-restart" title="Permanent link">&para;</a></h3>
+<p>If <code>restart</code> is present the code will attempt to restart the calculation
+from the <code>seedname.chk</code> file. The value of the parameter determines the
+position of the restart</p>
+<p>The valid options for this parameter are:</p>
+<ul>
+<li>
+<p><code>default</code>. Restart from the point at which the check file
+    <code>seedname.chk</code> was written</p>
+</li>
+<li>
+<p><code>wannierise</code>. Restart from the beginning of the wannierise routine</p>
+</li>
+<li>
+<p><code>plot</code>. Go directly to the plotting phase</p>
+</li>
+<li>
+<p><code>transport</code>. Go directly to the transport routines</p>
+</li>
+</ul>
+<h3 id="characterlen20-wvfn_formatted"><code>character(len=20) :: wvfn_formatted</code><a class="headerlink" href="#characterlen20-wvfn_formatted" title="Permanent link">&para;</a></h3>
+<p>If <code>wvfn_formatted</code>=<code>true</code>, then the wavefunctions will be read from
+disk as formatted (ie ASCII) files; otherwise they will be read as
+unformatted files. Unformatted is generally preferable as the files will
+take less disk space and I/O is significantly faster. However such files
+will not be transferable between all machine architectures and formatted
+files should be used if transferability is required (i.e., for test
+cases).</p>
+<p>The default value of this parameter is <span class="arithmatex">\(\verb#false#\)</span>.</p>
+<h3 id="characterlen20-spin"><code>character(len=20) :: spin</code><a class="headerlink" href="#characterlen20-spin" title="Permanent link">&para;</a></h3>
+<p>For bands from a spin polarised calculation <code>spin</code> determines which set
+of bands to read in, either <code>up</code> or <code>down</code>.</p>
+<p>The default value of this parameter is <code>up</code>.</p>
+<h3 id="integer-timing_level"><code>integer :: timing_level</code><a class="headerlink" href="#integer-timing_level" title="Permanent link">&para;</a></h3>
+<p>Determines the amount of timing information regarding the calculation
+that will be written to the output file. A value of 1 produces the least
+information.</p>
+<p>The default value is 1.</p>
+<h3 id="logical-translate_home_cell"><code>logical :: translate_home_cell</code><a class="headerlink" href="#logical-translate_home_cell" title="Permanent link">&para;</a></h3>
+<p>Determines whether to translate the final Wannier centres to the home
+unit cell at the end of the calculation. Mainly useful for molecular
+systems in which the molecule resides entirely within the home unit cell
+and user wants to write an xyz file (<code>write_xyz=.true.</code>) for the WF
+centres to compare with the structure.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="logical-write_xyz"><code>logical :: write_xyz</code><a class="headerlink" href="#logical-write_xyz" title="Permanent link">&para;</a></h3>
+<p>Determines whether to write the atomic positions and final Wannier
+centres to an xyz file, <code>seedname_centres.xyz</code>, for subsequent
+visualisation.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="logical-write_vdw_data"><code>logical :: write_vdw_data</code><a class="headerlink" href="#logical-write_vdw_data" title="Permanent link">&para;</a></h3>
+<p>Determines whether to write <code>seedname.vdw</code> for subsequent
+post-processing by the <code>w90vdw</code> utility (in the <code>utility/w90vdw/</code>
+directory of the distribution) for calculating van der Waals energies.
+Brillouin zone sampling must be at the Gamma-point only.</p>
+<p>The default value is <code>false</code>.</p>
+<h2 id="disentanglement">Disentanglement<a class="headerlink" href="#disentanglement" title="Permanent link">&para;</a></h2>
+<p>These keywords control the disentanglement routine of
+Ref. <sup id="fnref:ref3"><a class="footnote-ref" href="#fn:ref3">3</a></sup>, i.e., the iterative minimisation of
+<span class="arithmatex">\(\Omega_{\mathrm{I}}\)</span>. This routine will be activated if
+<code>num_wann</code><span class="arithmatex">\(\:&lt;\:\)</span><code>num_bands</code>.</p>
+<h3 id="realkinddp-dis_win_min"><code>real(kind=dp) :: dis_win_min</code><a class="headerlink" href="#realkinddp-dis_win_min" title="Permanent link">&para;</a></h3>
+<p>The lower bound of the outer energy window for the disentanglement
+procedure. Units are eV.</p>
+<p>The default is the lowest eigenvalue in the system.</p>
+<h3 id="realkinddp-dis_win_max"><code>real(kind=dp) :: dis_win_max</code><a class="headerlink" href="#realkinddp-dis_win_max" title="Permanent link">&para;</a></h3>
+<p>The upper bound of the outer energy window for the disentanglement
+procedure. Units are eV.</p>
+<p>The default is the highest eigenvalue in the given states (i.e., all
+states are included in the disentanglement procedure).</p>
+<h3 id="realkinddp-dis_froz_min"><code>real(kind=dp) :: dis_froz_min</code><a class="headerlink" href="#realkinddp-dis_froz_min" title="Permanent link">&para;</a></h3>
+<p>The lower bound of the inner energy window for the disentanglement
+procedure. Units are eV.</p>
+<p>If <code>dis_froz_max</code> is given, then the default for <code>dis_froz_min</code> is
+<code>dis_win_min</code>.</p>
+<h3 id="realkinddp-dis_froz_max"><code>real(kind=dp) :: dis_froz_max</code><a class="headerlink" href="#realkinddp-dis_froz_max" title="Permanent link">&para;</a></h3>
+<p>The upper bound of the inner (frozen) energy window for the
+disentanglement procedure. If <code>dis_froz_max</code> is not specified, then
+there are no frozen states. Units are eV.</p>
+<p>No default.</p>
+<h3 id="logical-dis_froz_proj"><code>logical :: dis_froz_proj</code><a class="headerlink" href="#logical-dis_froz_proj" title="Permanent link">&para;</a></h3>
+<p>To activate projectability disentanglement procedure, which selectively
+discard/disentangle/freeze state <span class="arithmatex">\(\vert n \mathbf{k}\rangle\)</span> based on
+its projectability onto some localized atomic orbitals.</p>
+<p>Note: this requires the <code>amn</code> file is properly normalized, i.e.,
+projectability computed from <span class="arithmatex">\(A A^\dagger\)</span> must be smaller than or equal
+to 1. The pseudo-atomic projection satisfies such requirement, see
+<a href="#sec:proj_pdwf" reference="sec:proj_pdwf" reference-type="ref">3.6</a>.</p>
+<p>Additionally, one can combine projectability disentanglement with energy
+disentanglement, i.e., enable both <code>dis_proj_min/max</code> and
+<code>dis_froz_min/max</code> simultaneously in the <code>win</code> file. These settings will
+freeze the union of inner energy window and high-projectability states,
+and exclude the union of states outside outer energy window and having
+low projectability.</p>
+<h3 id="realkinddp-dis_proj_min"><code>real(kind=dp) :: dis_proj_min</code><a class="headerlink" href="#realkinddp-dis_proj_min" title="Permanent link">&para;</a></h3>
+<p>The lower bound for the projectability disentanglement procedure.</p>
+<p>For states with projectabilities smaller than <code>dis_proj_min</code>, they will
+be discarded in the disentanglement procedure, i.e., similar to the case
+of outside of the outer energy window.</p>
+<p>For states with projectabilities larger than or equal to <code>dis_proj_min</code>,
+they will be included in the disentanglement procedure, i.e., similar to
+the case of inside the outer energy window.</p>
+<p>No unit.</p>
+<p>The default value is 0.95.</p>
+<h3 id="realkinddp-dis_proj_max"><code>real(kind=dp) :: dis_proj_max</code><a class="headerlink" href="#realkinddp-dis_proj_max" title="Permanent link">&para;</a></h3>
+<p>The upper bound for the projectability disentanglement procedure. For
+states with projectability larger than or equal to <code>dis_proj_max</code>, they
+will be freezed in the disentanglement procedure, i.e., similar to the
+case of inside the inner energy window.</p>
+<p>No unit.</p>
+<p>The default value is 0.01.</p>
+<h3 id="integer-dis_num_iter"><code>integer :: dis_num_iter</code><a class="headerlink" href="#integer-dis_num_iter" title="Permanent link">&para;</a></h3>
+<p>In the disentanglement procedure, the number of iterations used to
+extract the most connected subspace.</p>
+<p>The default value is 200.</p>
+<h3 id="realkinddp-dis_mix_ratio"><code>real(kind=dp) :: dis_mix_ratio</code><a class="headerlink" href="#realkinddp-dis_mix_ratio" title="Permanent link">&para;</a></h3>
+<p>In the disentanglement procedure, the mixing parameter to use for
+convergence (see pages 4-5 of Ref. <sup id="fnref2:ref3"><a class="footnote-ref" href="#fn:ref3">3</a></sup>). A value of 0.5 is a
+'safe' choice. Using 1.0 (i.e., no mixing) often gives faster
+convergence, but may cause the minimisation of <span class="arithmatex">\(\Omega_{\mathrm{I}}\)</span> to
+be unstable in some cases.</p>
+<p>Restriction: <span class="arithmatex">\(0.0&lt;\:\)</span><code>dis_mix_ratio</code><span class="arithmatex">\(\:\leq 1.0\)</span></p>
+<p>The default value is 0.5</p>
+<h3 id="realkinddp-dis_conv_tol"><code>real(kind=dp) :: dis_conv_tol</code><a class="headerlink" href="#realkinddp-dis_conv_tol" title="Permanent link">&para;</a></h3>
+<p>In the disentanglement procedure, the minimisation of
+<span class="arithmatex">\(\Omega_{\mathrm{I}}\)</span> is said to be converged if the fractional change
+in the gauge-invariant spread between successive iterations is less than
+<code>dis_conv_tol</code> for <code>dis_conv_window</code> iterations. Units are Å<span class="arithmatex">\(^2\)</span>.</p>
+<p>The default value is 1.0E-10</p>
+<h3 id="integer-dis_conv_window"><code>integer :: dis_conv_window</code><a class="headerlink" href="#integer-dis_conv_window" title="Permanent link">&para;</a></h3>
+<p>In the disentanglement procedure, the minimisation is said to be
+converged if the fractional change in the spread between successive
+iterations is less than <code>dis_conv_tol</code> for <code>dis_conv_window</code> iterations.</p>
+<p>The default value of this parameter is 3.</p>
+<h3 id="integer-dis_spheres_num"><code>integer :: dis_spheres_num</code><a class="headerlink" href="#integer-dis_spheres_num" title="Permanent link">&para;</a></h3>
+<p>Number of spheres in reciprocal space where the k-dependent
+disentanglement is performed. No disentanglement is performed for those
+k-points that are not included in any of the spheres.</p>
+<p>The default is 0, which means disentangle at every k-point in the full
+BZ (the standard mode in Wannier90).</p>
+<h3 id="integer-dis_spheres_first_wann"><code>integer :: dis_spheres_first_wann</code><a class="headerlink" href="#integer-dis_spheres_first_wann" title="Permanent link">&para;</a></h3>
+<p>Index of the first band that has to be considered as a Wannier function.
+Used only if <code>dis_spheres_num</code> is greater than zero. At k-points where
+disentanglement is not performed the bands from <code>dis_spheres_first_wann</code>
+to <code>dis_spheres_first_wann+num_wann</code> are used to wannierise. The bands
+excluded using <code>exclude_bands</code> should not be counted.</p>
+<p>The default is 1, the band at the lowest energy.</p>
+<h3 id="dis_spheres">dis_spheres<a class="headerlink" href="#dis_spheres" title="Permanent link">&para;</a></h3>
+<p>Each line gives the coordinate <span class="arithmatex">\(\mathbf{K}=K_1 \mathbf{B}_{1} + K_2
+\mathbf{B}_{2} + K_3 \mathbf{B}_3\)</span> of a k-point representing the center
+of one of the spheres used for k-dependent disentanglement. The same
+crystallographic units as for <code>kpoints</code> are used here. Each k-point
+coordinate <span class="arithmatex">\(\mathbf{K}^i\)</span> must the followed by the respectice sphere
+radius <span class="arithmatex">\(r_{i}\)</span> in inverse angstrom (on the same line).</p>
+<p>The number of lines must be equal to <code>dis_spheres_num</code>.</p>
+<p><code>begin dis_spheres</code> <span class="arithmatex">\(<span class="arithmatex">\(\begin{array}{cccc}
+ K^{1}_{1} &amp; K^{1}_{2} &amp; K^{1}_{3} &amp; r_{1} \\
+ K^{2}_{1} &amp; K^{2}_{2} &amp; K^{2}_{3} &amp; r_{2} \\
+\vdots
+\end{array}\)</span>\)</span> <code>end dis_spheres</code></p>
+<p>There is no default.</p>
+<h2 id="wannierise">Wannierise<a class="headerlink" href="#wannierise" title="Permanent link">&para;</a></h2>
+<p>Iterative minimisation of <span class="arithmatex">\(\widetilde{\Omega}\)</span>, the non-gauge-invariant
+part of the spread functional.</p>
+<h3 id="integer-num_iter"><code>integer :: num_iter</code><a class="headerlink" href="#integer-num_iter" title="Permanent link">&para;</a></h3>
+<p>Total number of iterations in the minimisation procedure. Set
+<code>num_iter=0</code> if you wish to generate projected WFs rather than
+maximally-localized WFs (see Example 8 in the Tutorial).</p>
+<p>The default value is 100</p>
+<h3 id="integer-num_cg_steps"><code>integer :: num_cg_steps</code><a class="headerlink" href="#integer-num_cg_steps" title="Permanent link">&para;</a></h3>
+<p>Number of conjugate gradient steps to take before resetting to steepest
+descents.</p>
+<p>The default value is 5</p>
+<h3 id="integer-conv_window"><code>integer :: conv_window</code><a class="headerlink" href="#integer-conv_window" title="Permanent link">&para;</a></h3>
+<p>If <code>conv_window</code><span class="arithmatex">\(\:&gt;1\)</span>, then the minimisation is said to be converged if
+the change in <span class="arithmatex">\(\Omega\)</span> over <code>conv_window</code> successive iterations is less
+than <code>conv_tol</code>. Otherwise, the minimisation proceeds for num_iter
+iterations (default).</p>
+<p>The default value is -1</p>
+<h3 id="realkinddp-conv_tol"><code>real(kind=dp) :: conv_tol</code><a class="headerlink" href="#realkinddp-conv_tol" title="Permanent link">&para;</a></h3>
+<p>If <code>conv_window</code><span class="arithmatex">\(\:&gt;1\)</span>, then this is the convergence tolerance on
+<span class="arithmatex">\(\Omega\)</span>, otherwise not used. Units are Å<span class="arithmatex">\(^2\)</span>.</p>
+<p>The default value is 1.0E-10</p>
+<h3 id="logical-precond"><code>logical :: precond</code><a class="headerlink" href="#logical-precond" title="Permanent link">&para;</a></h3>
+<p>Whether or not to use preconditioning to speed up the minimization of
+the spreads. This is based on the same idea as the classical
+Tetter-Payne-Allan preconditionning for DFT and dampens the
+high-frequency oscillations of the gradient due to contributions from
+large real lattice vectors. It is useful when the optimization is slow,
+especially on fine grids. When <code>optimisation&lt;3</code>, this uses a slower
+algorithm to save memory.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="realkinddp-conv_noise_amp"><code>real(kind=dp) :: conv_noise_amp</code><a class="headerlink" href="#realkinddp-conv_noise_amp" title="Permanent link">&para;</a></h3>
+<p>If <code>conv_noise_amp</code><span class="arithmatex">\(\:&gt;0\)</span>, once convergence (as defined above) is
+achieved, some random noise <span class="arithmatex">\(f\)</span> is added to the search direction, and
+the minimisation is continued until convergence is achieved once more.
+If the same value of <span class="arithmatex">\(\Omega\)</span> as before is arrived at, then the
+calculation is considered to be converged. If not, then random noise is
+added again and the procedure repeated up to a maximum of
+<code>conv_noise_num</code> times. <code>conv_noise_amp</code> is the amplitude of the random
+noise <span class="arithmatex">\(f\)</span> that is added to the search direction:
+<span class="arithmatex">\(0 &lt; |f| &lt;\:\)</span><code>conv_noise_amp</code>. This functionality requires
+<code>conv_window</code><span class="arithmatex">\(\:&gt;1\)</span>. If <code>conv_window</code> is not specified, it is set to
+the value 5 by default.</p>
+<p>If <code>conv_noise_amp</code><span class="arithmatex">\(\:\leq 0\)</span>, then no noise is added (default).</p>
+<p>The default value is -1.0</p>
+<h3 id="integer-conv_noise_num"><code>integer :: conv_noise_num</code><a class="headerlink" href="#integer-conv_noise_num" title="Permanent link">&para;</a></h3>
+<p>If <code>conv_noise_amp</code><span class="arithmatex">\(\:&gt;0\)</span>, then this is the number of times in the
+minimisation that random noise is added.</p>
+<p>The default value is 3</p>
+<h3 id="integer-num_dump_cycles"><code>integer :: num_dump_cycles</code><a class="headerlink" href="#integer-num_dump_cycles" title="Permanent link">&para;</a></h3>
+<p>Write sufficient information to do a restart every <code>num_dump_cycles</code>
+iterations.</p>
+<p>The default is 100</p>
+<h3 id="integer-num_print_cycles"><code>integer :: num_print_cycles</code><a class="headerlink" href="#integer-num_print_cycles" title="Permanent link">&para;</a></h3>
+<p>Write data to the master output file <code>seedname.wout</code> every
+<code>num_print_cycles</code> iterations.</p>
+<p>The default is 1</p>
+<h3 id="logical-write_r2mn"><code>logical :: write_r2mn</code><a class="headerlink" href="#logical-write_r2mn" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#write_r2mn#=\verb#true#\)</span>, then the matrix elements
+<span class="arithmatex">\(\langle m|r^2|n\rangle\)</span> (where <span class="arithmatex">\(m\)</span> and <span class="arithmatex">\(n\)</span> refer to WF) are written to
+file <code>seedname.r2mn</code> at the end of the Wannierisation procedure.</p>
+<p>The default value of this parameter is <code>false</code>.</p>
+<h3 id="logical-guiding_centres"><code>logical :: guiding_centres</code><a class="headerlink" href="#logical-guiding_centres" title="Permanent link">&para;</a></h3>
+<p>Use guiding centres during the minimisation, in order to avoid local
+minima.</p>
+<p><code>wannier90</code> uses a logarithm definition of the spread functional. As we
+are taking the log of a complex argument there is a possibility that the
+algorithm might make inconsistent choices for the branch cut. This
+manifests itself as complex WF with a large spread. By using guiding
+centres the code will attempt to make a consistent choice of branch cut.
+Experience shows that with <code>guiding_centres</code> set to true this problem is
+avoided and doing so does not cause any problems. For this reason we
+recommend setting <code>guiding_centres</code> to true where possible (it is only
+not possible if an explicit projection block is not defined).</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="integer-num_guide_cycles"><code>integer :: num_guide_cycles</code><a class="headerlink" href="#integer-num_guide_cycles" title="Permanent link">&para;</a></h3>
+<p>If <code>guiding_centres</code> is set to true, then the guiding centres are used
+only every <code>num_guide_cycles</code>.</p>
+<p>The default value is 1.</p>
+<h3 id="integer-num_no_guide_iter"><code>integer :: num_no_guide_iter</code><a class="headerlink" href="#integer-num_no_guide_iter" title="Permanent link">&para;</a></h3>
+<p>If <code>guiding_centres</code> is set to true, then the guiding centres are used
+only after <code>num_no_guide_iter</code> minimisation iterations have been
+completed.</p>
+<p>The default value is 0.</p>
+<h3 id="realkinddp-trial_step"><code>real(kind=dp) :: trial_step</code><a class="headerlink" href="#realkinddp-trial_step" title="Permanent link">&para;</a></h3>
+<p>The value of the trial step for the parabolic fit in the line search
+minimisation used in the minimisation of the spread function. Cannot be
+used in conjunction with <code>fixed_step</code> (see below). If the minimisation
+procedure doesn't converge, try decreasing the value of <code>trial_step</code> to
+give a more accurate line search.</p>
+<p>The default value is 2.0</p>
+<h3 id="realkinddp-fixed_step"><code>real(kind=dp) :: fixed_step</code><a class="headerlink" href="#realkinddp-fixed_step" title="Permanent link">&para;</a></h3>
+<p>If this is given a value in the input file, then a fixed step of length
+<code>fixed_step</code> (instead of a parabolic line search) is used at each
+iteration of the spread function minimisation. Cannot be used in
+conjunction with <code>trial_step</code>. This can be useful in cases in which
+minimisation with a line search fails to converge.</p>
+<p>There is no default value.</p>
+<h3 id="logical-use_bloch_phases"><code>logical :: use_bloch_phases</code><a class="headerlink" href="#logical-use_bloch_phases" title="Permanent link">&para;</a></h3>
+<p>Determines whether to use the Bloch functions as the initial guess for
+the projections. Can only be used if <code>disentanglement = false</code>.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="logical-site_symmetry"><code>logical :: site_symmetry</code><a class="headerlink" href="#logical-site_symmetry" title="Permanent link">&para;</a></h3>
+<p>Construct symmetry-adapted Wannier functions. For the detail of the
+theoretical background, see Ref. <sup id="fnref:ref4"><a class="footnote-ref" href="#fn:ref4">4</a></sup>. Cannot be used in
+conjunction with the inner (frozen) energy window.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="realkinddp-symmetrize_eps"><code>real(kind=dp) :: symmetrize_eps</code><a class="headerlink" href="#realkinddp-symmetrize_eps" title="Permanent link">&para;</a></h3>
+<p>Convergence threshold to check whether the symmetry condition (Eq. (19)
+in Ref. <sup id="fnref2:ref4"><a class="footnote-ref" href="#fn:ref4">4</a></sup>) on the unitary matrix
+<span class="arithmatex">\(\mathbf{U}^{(\mathbf{k})}\)</span> is satisfied or not. See also Eq. (29) in
+Ref. <sup id="fnref3:ref4"><a class="footnote-ref" href="#fn:ref4">4</a></sup>. Used when <code>site_symmetry = .true</code>.</p>
+<p>The default value is 1.0E-3.</p>
+<h3 id="integer-slwf_num"><code>integer :: slwf_num</code><a class="headerlink" href="#integer-slwf_num" title="Permanent link">&para;</a></h3>
+<p>The number of objective Wannier functions for selective localisation in
+the selectively localised Wannier function (SLWF) method of
+Ref. <sup id="fnref:ref5"><a class="footnote-ref" href="#fn:ref5">5</a></sup>. These functions are obtained by minimising the
+spread functional only with respect to the degrees of freedom of a
+subset of <code>slwf_num</code> <span class="arithmatex">\(&lt;\)</span> <code>num_wann</code> functions. At convergence, the
+objective WFs will have a minimum cumulative spread, whereas the
+remaining <code>num_wann</code> <span class="arithmatex">\(-\)</span> <code>slwf_num</code> functions are left unoptimised. The
+initial guesses for the objective WFs are given by the first <code>slwf_num</code>
+orbitals in the <code>projections</code> block. If <code>slwf_num = num_wann</code> no
+selective minimisation is performed. In this case, <code>wannier90</code> will
+simply generate a set of <code>num_wann</code> MLWFs.</p>
+<p>The default is <code>num_wann</code>.</p>
+<h3 id="logical-slwf_constrain"><code>logical :: slwf_constrain</code><a class="headerlink" href="#logical-slwf_constrain" title="Permanent link">&para;</a></h3>
+<p>If <code>slwf_constrain=true</code>, then the centres of the objective Wannier
+functions are constrained to either the centres of the first <code>slwf_num</code>
+orbitals in the <code>projections</code> block or to new positions specified in the
+<code>slwf_centres</code> block (see
+Sec. <a href="#sec:centre_constraints">2.8.22</a>{reference-type="ref"
+reference="sec:centre_constraints"}). In this case, a modified spread
+functional, <span class="arithmatex">\(\Omega_c\)</span>, with the addition of a constraint term, as
+described in Ref. <sup id="fnref2:ref5"><a class="footnote-ref" href="#fn:ref5">5</a></sup>.</p>
+<p>The default is <code>false</code></p>
+<h3 id="realkinddp-slwf_lambda"><code>real(kind=dp) :: slwf_lambda</code><a class="headerlink" href="#realkinddp-slwf_lambda" title="Permanent link">&para;</a></h3>
+<p>The value of the Lagrange multiplier <span class="arithmatex">\(\lambda\)</span> for the constraint term
+in term added to modify the spread functional:
+<span class="arithmatex">\(\lambda \sum_{n=1}^{J'} \left(\overline{\mathbf{r}}_n - \mathbf{r}_{0n}\right)^2\)</span>,
+where <span class="arithmatex">\(J'\)</span> is <code>slwf_num</code>, and <span class="arithmatex">\(\overline{\mathbf{r}}_{n}\)</span> and
+<span class="arithmatex">\(\mathbf{r}_{0n}\)</span> are the centre and target centre, respectively, for
+the <span class="arithmatex">\(n^{\text{th}}\)</span> objective WF.</p>
+<p>The default is <code>0.0</code>.</p>
+<h3 id="sec:centre_constraints">Constraints on centres<a class="headerlink" href="#sec:centre_constraints" title="Permanent link">&para;</a></h3>
+<p>If <code>slwf_constrain=true</code>, then by default the centres to which the
+<code>slwf_num</code> objective Wannier function centres are constrained are given
+by the first <code>slwf_num</code> rows of the <code>projections</code> block.</p>
+<p>Optionally, the <code>slwf_centres</code> block may be used to define alternative
+target centres for some or all of the <code>slwf_num</code> objective Wannier
+functions.</p>
+<p>The block below shows an example of how to set the constraints:</p>
+<p><code>begin slwf_centres</code>\
+<code>2  0.0   0.0  0.0</code>\
+<code>4  0.25  0.0  0.0</code>\
+<code>end slwf_centres</code></p>
+<ul>
+<li>
+<p>The first line sets the constraint for the centre of objective WF
+    number 2 (as defined by the order of WFs in the <code>projections</code> block)
+    to (0.0,0.0,0.0) in fractional co-ordinates.</p>
+</li>
+<li>
+<p>The second line sets the constraint for the centre of objective WF
+    number 4 (as defined by the order of WFs in the <code>projections</code> block)
+    to (0.25,0.0,0.0) in fractional co-ordinates.</p>
+</li>
+<li>
+<p>The target centres of all other objective Wannier functions remain
+    as the centres given in the corresponding rows of the <code>projections</code>
+    block.</p>
+</li>
+</ul>
+<h2 id="post-processing">Post-Processing<a class="headerlink" href="#post-processing" title="Permanent link">&para;</a></h2>
+<p>Capabilities:</p>
+<ul>
+<li>
+<p>Plot the WF</p>
+</li>
+<li>
+<p>Plot the interpolated band structure</p>
+</li>
+<li>
+<p>Plot the Fermi surface</p>
+</li>
+<li>
+<p>Output the Hamiltonian in the WF basis</p>
+</li>
+<li>
+<p>Transport calculation (quantum conductance and density of states)</p>
+</li>
+</ul>
+<h3 id="logical-wannier_plot"><code>logical :: wannier_plot</code><a class="headerlink" href="#logical-wannier_plot" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#wannier_plot#=\verb#true#\)</span>, then the code will write out the
+Wannier functions in a format specified by <code>wannier_plot_format</code></p>
+<p>The default value of this parameter is <code>false</code>.</p>
+<h3 id="integer-wannier_plot_list"><code>integer :: wannier_plot_list(:)</code><a class="headerlink" href="#integer-wannier_plot_list" title="Permanent link">&para;</a></h3>
+<p>A list of WF to plot. The WF numbered as per the <code>seedname.wout</code> file
+after the minimisation of the spread.</p>
+<p>The default behaviour is to plot all WF. For example, to plot WF 4, 5, 6
+and 10:</p>
+<p><code>wannier_plot_list : 4-6, 10</code></p>
+<h3 id="integer-wannier_plot_supercell"><code>integer :: wannier_plot_supercell</code><a class="headerlink" href="#integer-wannier_plot_supercell" title="Permanent link">&para;</a></h3>
+<p>The code generates the WFs on a grid corresponding to a
+'super-unit-cell'. If <code>wannier_plot_supercell</code> is provided as a single
+integer, then the size of the super-unit-cell is
+<code>wannier_plot_supercell</code> times the size of the unit cell along all three
+linear dimensions (the 'home' unit cell is kept approximately in the
+middle); otherwise, if three integers are provided, the size of the
+super-unit-cell is <code>wannier_plot_supercell(i)</code> times the size of the
+unit cell along the <span class="arithmatex">\(i-\)</span>th linear dimension.</p>
+<p>The default value is 2.</p>
+<h3 id="characterlen20-wannier_plot_format"><code>character(len=20) :: wannier_plot_format</code><a class="headerlink" href="#characterlen20-wannier_plot_format" title="Permanent link">&para;</a></h3>
+<p>WF can be plotted in either XCrySDen (xsf) format or Gaussian cube
+format. The valid options for this parameter are:</p>
+<ul>
+<li>
+<p><code>xcrysden</code> (default)</p>
+</li>
+<li>
+<p><code>cube</code></p>
+</li>
+</ul>
+<p>If <code>wannier_plot_format=xsf</code>: the code outputs the WF on the entire
+super-unit-cell specified by <code>wannier_plot_supercell</code>.</p>
+<p>If <code>wannier_plot_format=cube</code>: the code outputs the WF on a grid that is
+smaller than the super-unit-cell specified by <code>wannier_plot_supercell</code>.
+This grid is determined by <code>wannier_plot_mode</code>, <code>wannier_plot_radius</code>
+and <code>wannier_plot_scale</code>, described in detail below.</p>
+<p>The code is able to output Gaussian cube files for systems with
+non-orthogonal lattice vectors. Many visualisation programs (including
+XCrySDen), however, are only able to handle cube files for systems with
+<em>orthogonal</em> lattice vectors. One visualisation program that is capable
+of dealing with non-orthogonal lattice vectors is VESTA
+(<a href="http://jp-minerals.org/vesta/en/">http://jp-minerals.org/vesta/en/</a>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It's worth noting that another visualisation program, VMD
+(<a href="http://www.ks.uiuc.edu/Research/vmd">http://www.ks.uiuc.edu/Research/vmd</a>), is able to deal with
+certain special cases of non-orthogonal lattice vectors; see
+<a href="http://www.ks.uiuc.edu/Research/vmd/plugins/molfile/cubeplugin.html">http://www.ks.uiuc.edu/Research/vmd/plugins/molfile/cubeplugin.html</a>
+for details.</p>
+</div>
+<h3 id="characterlen20-wannier_plot_mode"><code>character(len=20) :: wannier_plot_mode</code><a class="headerlink" href="#characterlen20-wannier_plot_mode" title="Permanent link">&para;</a></h3>
+<p>Choose the mode in which to plot the WF, either as a molecule or as a
+crystal.</p>
+<p>The valid options for this parameter are:</p>
+<ul>
+<li>
+<p><code>crystal</code> (default)</p>
+</li>
+<li>
+<p><code>molecule</code></p>
+</li>
+</ul>
+<p>If <code>wannier_plot_format=cube</code>:</p>
+<ul>
+<li>
+<p>if <code>wannier_plot_mode = molecule</code>, then wherever the WF centre sits
+    in the supercell, the origin of the cube is shifted (for the purpose
+    of plotting only, ie, nothing is done to the U matrices etc) to
+    coincide with the centre of mass of the atomic positions specified
+    by the user in the <code>.win</code> input file. These atomic positions are
+    also written to the cube file, so when it is visualised, the WF
+    appears superimposed on the molecular structure.</p>
+</li>
+<li>
+<p>if <code>wannier_plot_mode = crystal</code>, then the WF is not shifted, but
+    instead the code searches for atoms that are within a radius of
+    <code>wannier_plot_scale</code> <span class="arithmatex">\(\times\)</span> <code>wannier_plot_radius</code> of the WF centre
+    and writes the coordinates of these atoms to the cube file. In this
+    way, when the cube file is visualised, the WF appears superimposed
+    on the nearest atoms to the WF centre.</p>
+</li>
+<li>
+<p><code>crystal</code> mode can be used for molecules, and <code>molecule</code> mode can be
+    used for crystals.</p>
+</li>
+</ul>
+<h3 id="realkinddp-wannier_plot_radius"><code>real(kind=dp) :: wannier_plot_radius</code><a class="headerlink" href="#realkinddp-wannier_plot_radius" title="Permanent link">&para;</a></h3>
+<p>If <code>wannier_plot_format=cube</code>, then <code>wannier_plot_radius</code> is the radius
+of the sphere that must fit inside the parallelepiped in which the WF is
+plotted. <code>wannier_plot_radius</code> must be greater than 0. Units are Å.</p>
+<p>The default value is 3.5.</p>
+<h3 id="realkinddp-wannier_plot_scale"><code>real(kind=dp) :: wannier_plot_scale</code><a class="headerlink" href="#realkinddp-wannier_plot_scale" title="Permanent link">&para;</a></h3>
+<p>If <code>wannier_plot_format=cube</code> and <code>wannier_plot_mode=crystal</code>, then the
+code searches for atoms that are within a radius of <code>wannier_plot_scale</code>
+<span class="arithmatex">\(\times\)</span> <code>wannier_plot_radius</code> of the WF centre and writes the
+coordinates of these atoms to the cube file. In this way, when the cube
+file is visualised, the WF appears superimposed on the nearest atoms to
+the WF centre. <code>wannier_plot_scale</code> must be greater than 0. This
+parameter is dimensionless.</p>
+<p>The default value is 1.0.</p>
+<h3 id="characterlen20-wannier_plot_spinor_mode"><code>character(len=20) :: wannier_plot_spinor_mode</code><a class="headerlink" href="#characterlen20-wannier_plot_spinor_mode" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#spinors#=\verb#true#\)</span> then this parameter controls the
+quantity to plot. For a spinor WF with components <span class="arithmatex">\([\phi,\psi]\)</span> the
+quatity plotted is</p>
+<ul>
+<li>
+<p><code>total</code> (default). <span class="arithmatex">\(\sqrt{[|\phi|^2+|\psi|^2}\)</span></p>
+</li>
+<li>
+<p><code>up</code>. <span class="arithmatex">\(|\phi|\times sign(Re\{\phi\})\)</span> if
+    <span class="arithmatex">\(\verb#wannier_plot_spinor_phase#=\verb#true#\)</span>, otherwise <span class="arithmatex">\(|\phi|\)</span></p>
+</li>
+<li>
+<p><code>down</code>. <span class="arithmatex">\(|\psi|\times sign(Re\{\psi\})\)</span> if
+    <span class="arithmatex">\(\verb#wannier_plot_spinor_phase#=\verb#true#\)</span>, otherwise <span class="arithmatex">\(|\psi|\)</span></p>
+</li>
+</ul>
+<p>Note: making a visual representation of a spinor WF is not as
+straightforward as for a scalar WF. While a scalar WF is typically a
+real valued function, a spinor WF is a complex, two component spinor.
+<code>wannier90</code> is able to plot several different quantities derived from a
+spinor WF which should give you a good idea of the nature of the WF.</p>
+<h3 id="logical-wannier_plot_spinor_phase"><code>logical :: wannier_plot_spinor_phase</code><a class="headerlink" href="#logical-wannier_plot_spinor_phase" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#wannier_plot_spinor_phase#=\verb#true#\)</span> phase information will
+be taken into account when plotting a spinor WF.</p>
+<h3 id="logical-bands_plot"><code>logical :: bands_plot</code><a class="headerlink" href="#logical-bands_plot" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#bands_plot#=\verb#true#\)</span>, then the code will calculate the
+band structure, through Wannier interpolation, along the path in k-space
+defined by <code>bands_kpath</code> using <code>bands_num_points</code> along the first
+section of the path and write out an output file in a format specified
+by <code>bands_plot_format</code>.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="kpoint_path">kpoint_path<a class="headerlink" href="#kpoint_path" title="Permanent link">&para;</a></h3>
+<p>Defines the path in k-space along which to calculate the bandstructure.
+Each line gives the start and end point (with labels) for a section of
+the path. Values are in fractional coordinates with respect to the
+primitive reciprocal lattice vectors.</p>
+<p><code>begin kpoint_path</code> <span class="arithmatex">\(<span class="arithmatex">\(\begin{array}{cccccccc}
+G &amp; 0.0 &amp; 0.0 &amp; 0.0 &amp; L &amp; 0.0 &amp; 0.0 &amp; 1.0 \\
+L &amp; 0.0 &amp; 0.0 &amp; 1.0 &amp; N &amp; 0.0 &amp; 1.0 &amp; 1.0 \\
+\vdots
+\end{array}\)</span>\)</span> <code>end kpoint_path</code></p>
+<p>There is no default</p>
+<h3 id="integer-bands_num_points"><code>integer :: bands_num_points</code><a class="headerlink" href="#integer-bands_num_points" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#bands_plot#=\verb#true#\)</span>, then the number of points along the
+first section of the bandstructure plot given by <code>kpoint_path</code>. Other
+sections will have the same density of k-points.</p>
+<p>The default value for <code>bands_num_points</code> is 100.</p>
+<h3 id="characterlen20-bands_plot_format"><code>character(len=20) :: bands_plot_format</code><a class="headerlink" href="#characterlen20-bands_plot_format" title="Permanent link">&para;</a></h3>
+<p>Format in which to plot the interpolated band structure. The valid
+options for this parameter are:</p>
+<ul>
+<li>
+<p><code>gnuplot</code> (default)</p>
+</li>
+<li>
+<p><code>xmgrace</code></p>
+</li>
+</ul>
+<p>Note: it is possible to request output in both formats eg
+<span class="arithmatex">\(\verb#bands_format#=\verb#gnuplot xmgrace#\)</span></p>
+<h3 id="integer-bands_plot_project"><code>integer :: bands_plot_project(:)</code><a class="headerlink" href="#integer-bands_plot_project" title="Permanent link">&para;</a></h3>
+<p>If present <code>wannier90</code> will compute the contribution of this set of WF
+to the states at each point of the interpolated band structure. The WF
+are numbered according to the seedname.wout file. The result is written
+in the <code>seedname_band.dat</code> file, and a corresponding gnuplot script to
+<code>seedname_band_proj.dat</code> .</p>
+<p>For example, to project on to WFs 2, 6, 7, 8 and 12:</p>
+<p><code>bands_plot_project : 2, 6-8, 12</code></p>
+<h3 id="characterlen20-bands_plot_mode"><code>character(len=20) :: bands_plot_mode</code><a class="headerlink" href="#characterlen20-bands_plot_mode" title="Permanent link">&para;</a></h3>
+<p>To interpolate the band structure along the k-point path, either use the
+Slater-Koster interpolation scheme or truncate the Hamiltonian matrix in
+the WF basis. Truncation criteria are provided by <code>hr_cutoff</code> and
+<code>dist_cutoff</code>.</p>
+<p>The valid options for this parameter are:</p>
+<ul>
+<li>
+<p><code>s-k</code> (default)</p>
+</li>
+<li>
+<p><code>cut</code></p>
+</li>
+</ul>
+<h3 id="integer-bands_plot_dim"><code>integer :: bands_plot_dim</code><a class="headerlink" href="#integer-bands_plot_dim" title="Permanent link">&para;</a></h3>
+<p>Dimension of the system. If <span class="arithmatex">\(\verb#bands_plot_dim#&lt;\:\)</span><code>&lt;!-- --&gt;</code>3
+and <span class="arithmatex">\(\verb#bands_plot_mode#=\verb#cut#\)</span>, lattice vector
+<span class="arithmatex">\(\mathbf{R}=N_1 \mathbf{A}_{1} + N_2 \mathbf{A}_{2} + N_3 \mathbf{A}_3\)</span>,
+where <span class="arithmatex">\(N_i=0\)</span> if <span class="arithmatex">\(\mathbf{A}_i\)</span> is parallel to any of the confined
+directions specified by <code>one_dim_axis</code>, are exclusively used in the band
+structure interpolation.</p>
+<p>The valid options for this parameter are:</p>
+<ul>
+<li>
+<p>3 (default)</p>
+</li>
+<li>
+<p>2</p>
+</li>
+<li>
+<p>1</p>
+</li>
+</ul>
+<h3 id="logical-fermi_surface_plot"><code>logical :: fermi_surface_plot</code><a class="headerlink" href="#logical-fermi_surface_plot" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#fermi_surface_plot#=\verb#true#\)</span>, then the code will
+calculate, through Wannier interpolation, the eigenvalues on a regular
+grid with <code>fermi_surface_num_points</code> in each direction. The code will
+write a file in bxsf format which can be read by XCrySDen in order to
+plot the Fermi surface.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="integer-fermi_surface_num_points"><code>integer :: fermi_surface_num_points</code><a class="headerlink" href="#integer-fermi_surface_num_points" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#fermi_surface_plot#=\verb#true#\)</span>, then the number of divisions
+in the regular k-point grid used to calculate the Fermi surface.</p>
+<p>The default value for <code>fermi_surface_num_points</code> is 50.</p>
+<h3 id="realkinddp-fermi_energy"><code>real(kind=dp) :: fermi_energy</code><a class="headerlink" href="#realkinddp-fermi_energy" title="Permanent link">&para;</a></h3>
+<p>The Fermi energy in eV. This parameter is written into the bxsf file. If
+<code>fermi_energy</code> is specified, <code>fermi_energy_min</code>, <code>fermi_energy_max</code>,
+and <code>fermi_energy_step</code> should not be specified, and vice-versa.</p>
+<p>The default value is 0.0</p>
+<h3 id="realkinddp-fermi_energy_min"><code>real(kind=dp) :: fermi_energy_min</code><a class="headerlink" href="#realkinddp-fermi_energy_min" title="Permanent link">&para;</a></h3>
+<p>Instead of specifyfing a single Fermi energy, it is possible to scan the
+Fermi level over a range of values, and recompute certain quantities for
+each <span class="arithmatex">\(\varepsilon_F\)</span>. This is the minimum value in the range (in
+eV).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Scanning the Fermi level is currently supported only by the
+<code>postw90</code> module <code>berry</code>, for <code>berry_task=ahc,morb</code>. For all other
+functionalities that require a knowledge of <span class="arithmatex">\(\varepsilon_F\)</span>, use
+<code>fermi_energy</code> instead.</p>
+</div>
+<p>There is no default value.</p>
+<h3 id="realkinddp-fermi_energy_max"><code>real(kind=dp) :: fermi_energy_max</code><a class="headerlink" href="#realkinddp-fermi_energy_max" title="Permanent link">&para;</a></h3>
+<p>The maximum value in the range of Fermi energies. Units are eV.</p>
+<p>The default value is <code>fermi_energy_min</code>+1.0.</p>
+<h3 id="realkinddp-fermi_energy_step"><code>real(kind=dp) :: fermi_energy_step</code><a class="headerlink" href="#realkinddp-fermi_energy_step" title="Permanent link">&para;</a></h3>
+<p>Difference between consecutive values of the Fermi energy when scanning
+from <code>fermi_energy_min</code> to <code>fermi_energy_max</code>. Units are eV.</p>
+<p>The default value is 0.01.</p>
+<h3 id="characterlen20-fermi_surface_plot_format"><code>character(len=20) :: fermi_surface_plot_format</code><a class="headerlink" href="#characterlen20-fermi_surface_plot_format" title="Permanent link">&para;</a></h3>
+<p>Format in which to plot the Fermi surface. The valid options for this
+parameter are:</p>
+<ul>
+<li><code>xcrysden</code> (default)</li>
+</ul>
+<h3 id="logical-write_hr"><code>logical :: write_hr</code><a class="headerlink" href="#logical-write_hr" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#write_hr#=\verb#true#\)</span>, then the Hamiltonian matrix in the WF
+basis will be written to a file <code>seedname_hr.dat</code>.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="logical-write_rmn"><code>logical :: write_rmn</code><a class="headerlink" href="#logical-write_rmn" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#write_rmn#=\verb#true#\)</span>, then the position operator in the WF
+basis will be written to a file <code>seedname_r.dat</code>.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="logical-write_bvec"><code>logical :: write_bvec</code><a class="headerlink" href="#logical-write_bvec" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#write_bvec#=\verb#true#\)</span>, then the the matrix elements of
+bvector and their weights will be written to a file <code>seedname.bvec</code>.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="logical-write_tb"><code>logical :: write_tb</code><a class="headerlink" href="#logical-write_tb" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#write_tb#=\verb#true#\)</span>, then the lattice vectors, together
+with the Hamiltonian and position-operator matrices in the WF basis,
+will be written to a file <code>seedname_tb.dat</code>, in units of Angstrom and
+eV.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="logical-transport"><code>logical :: transport</code><a class="headerlink" href="#logical-transport" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#transport#=\verb#true#\)</span>, then the code will calculate quantum
+conductance and density of states of a one-dimensional system. The
+results will be written to files <code>seedname_qc.dat</code> and
+<code>seedname_dos.dat</code>, respectively. Since both quantities are a function
+of energy, they will be evaluated from <code>tran_win_min</code> to <code>tran_win_max</code>
+with an interval of <code>tran_energy_step</code>.</p>
+<p>The default value of this parameter is <code>false</code>.</p>
+<h3 id="characterlen20-transport_mode"><code>character(len=20) :: transport_mode</code><a class="headerlink" href="#characterlen20-transport_mode" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#transport_mode#=\verb#bulk#\)</span>, quantum conductance and density
+of states are calculated for a perfectly-periodic one-dimensional
+system. In this case, the transport part can either use the Hamiltonian
+matrix in the WF basis generated by <code>wannier90</code> or a Hamiltonian matrix
+provided by the external file <code>seedname_htB.dat</code>.</p>
+<p>If <span class="arithmatex">\(\verb#transport_mode#=\verb#lcr#\)</span>, quantum conductance and density
+of states are calculated for a system where semi-infinite, left and
+right leads are connected through a central conductor region. In this
+case, the transport part will work independently from the
+disentanglement and wannierise procedure. Details of the method is
+described in Ref. <sup id="fnref:ref6"><a class="footnote-ref" href="#fn:ref6">6</a></sup>.</p>
+<p>If <span class="arithmatex">\(\verb#tran_read_ht# = \verb#true#\)</span> then the Hamiltonian matrices
+must be provided by the five external files:
+<code>seedname_htL.dat, seedname_htLC.dat, seedname_htC.dat, seedname_htCR.dat, seedname_htR.dat</code>.
+If <span class="arithmatex">\(\verb#tran_read_ht# = \verb#false#\)</span> then the Hamiltonian matrices
+are found automatically provided the supercell adheres to conditions
+outlined in Section <a href="#sec:2c2">7.3</a>{reference-type="ref"
+reference="sec:2c2"}.</p>
+<p>The valid options for this parameter are:</p>
+<ul>
+<li>
+<p><code>bulk</code> (default)</p>
+</li>
+<li>
+<p><code>lcr</code></p>
+</li>
+</ul>
+<h3 id="realkinddp-tran_win_min"><code>real(kind=dp) :: tran_win_min</code><a class="headerlink" href="#realkinddp-tran_win_min" title="Permanent link">&para;</a></h3>
+<p>The lower bound of the energy window for the transport calculation.
+Units are eV.</p>
+<p>The default value is -3.0.</p>
+<h3 id="realkinddp-tran_win_max"><code>real(kind=dp) :: tran_win_max</code><a class="headerlink" href="#realkinddp-tran_win_max" title="Permanent link">&para;</a></h3>
+<p>The upper bound of the energy window for the transport calculation.
+Units are eV.</p>
+<p>The default value is 3.0.</p>
+<h3 id="realkinddp-tran_energy_step"><code>real(kind=dp) :: tran_energy_step</code><a class="headerlink" href="#realkinddp-tran_energy_step" title="Permanent link">&para;</a></h3>
+<p>Sampling interval of the energy values from <code>tran_win_min</code> to
+<code>tran_win_max</code>. Units are eV.</p>
+<p>The default value is 0.01.</p>
+<h3 id="realkinddp-fermi_energy_1"><code>real(kind=dp) :: fermi_energy</code><a class="headerlink" href="#realkinddp-fermi_energy_1" title="Permanent link">&para;</a></h3>
+<p>The Fermi energy in eV. The energy axis of the quantum conductance and
+density of states data will be shifted rigidly by this amount.</p>
+<p>The default value is 0.0</p>
+<h3 id="integer-tran_num_bb"><code>integer :: tran_num_bb</code><a class="headerlink" href="#integer-tran_num_bb" title="Permanent link">&para;</a></h3>
+<p>Size of a bulk Hamiltonian matrix. This number is equal to the number of
+WFs in one principal layer.</p>
+<p>A one-dimensional system can be viewed as an array of principal layers
+which are defined in a way that localized basis functions inside a
+certain principal layer only interact with those in the nearest neighbor
+principal layer. In <code>wannier90</code> a principal layer will be an integer
+multiple of a unit cell, and the size is determined by <code>hr_cutoff</code>
+and/or <code>dist_cutoff</code>. The criterion is rather arbitrary when WFs are
+adopted as a localized basis set, and it is up to a user's choice.</p>
+<p>The default value is 0.</p>
+<h3 id="integer-tran_num_ll"><code>integer :: tran_num_ll</code><a class="headerlink" href="#integer-tran_num_ll" title="Permanent link">&para;</a></h3>
+<p>Size of a left-lead Hamiltonian matrix. If
+<span class="arithmatex">\(\verb#transport_mode# = \verb#lcr#\)</span> and
+<span class="arithmatex">\(\verb#tran_read_ht# = \verb#false#\)</span> then <code>tran_num_ll</code> is the number of
+Wannier functions in a principal layer.</p>
+<p>The default value is 0.</p>
+<h3 id="integer-tran_num_rr"><code>integer :: tran_num_rr</code><a class="headerlink" href="#integer-tran_num_rr" title="Permanent link">&para;</a></h3>
+<p>Size of a right-lead Hamiltonian matrix.</p>
+<p>The default value is 0.</p>
+<h3 id="integer-tran_num_cc"><code>integer :: tran_num_cc</code><a class="headerlink" href="#integer-tran_num_cc" title="Permanent link">&para;</a></h3>
+<p>Size of a conductor Hamiltonian matrix.</p>
+<p>The default value is 0.</p>
+<h3 id="integer-tran_num_lc"><code>integer :: tran_num_lc</code><a class="headerlink" href="#integer-tran_num_lc" title="Permanent link">&para;</a></h3>
+<p>Number of columns in a left-lead_conductor Hamiltonian matrix. Number of
+rows must be equal to <code>tran_num_ll</code>.</p>
+<p>The default value is 0.</p>
+<h3 id="integer-tran_num_cr"><code>integer :: tran_num_cr</code><a class="headerlink" href="#integer-tran_num_cr" title="Permanent link">&para;</a></h3>
+<p>Number of rows in a conductor_right-lead Hamiltonian matrix. Number of
+columns must be equal to <code>tran_num_rr</code>.</p>
+<p>The default value is 0.</p>
+<h3 id="integer-tran_num_cell_ll"><code>integer :: tran_num_cell_ll</code><a class="headerlink" href="#integer-tran_num_cell_ll" title="Permanent link">&para;</a></h3>
+<p>Number of unit cells in one principal layer of left lead. Used if
+<span class="arithmatex">\(\verb#transport_mode# = \verb#lcr#\)</span> and
+<span class="arithmatex">\(\verb#tran_read_ht# = \verb#false#\)</span>.</p>
+<p>The default value is 0.</p>
+<h3 id="integer-tran_num_cell_rr"><code>integer :: tran_num_cell_rr</code><a class="headerlink" href="#integer-tran_num_cell_rr" title="Permanent link">&para;</a></h3>
+<p>Number of unit cells in one principal layer of right lead. Not used at
+present.</p>
+<p>The default value is 0.</p>
+<h3 id="integer-tran_num_bandc"><code>integer :: tran_num_bandc</code><a class="headerlink" href="#integer-tran_num_bandc" title="Permanent link">&para;</a></h3>
+<p>Half-bandwidth+1 of a band-diagonal conductor Hamiltonian matrix.</p>
+<p>The Hamiltonian matrix of a central conductor part, which is read from
+<code>seedname_htC.dat</code>, will be diagonally dominant when <code>tran_num_cc</code> is
+very large. <code>tran_num_bandc</code> is used to construct a compact matrix which
+contains the non-zero band-diagonal part of a full conductor Hamiltonian
+matrix. Setting this parameter is only meaningful when <code>tran_num_bandc</code>
+is greater than <code>tran_num_lc</code> and <code>tran_num_cr</code>.</p>
+<p>The default value is 0.</p>
+<h3 id="logical-tran_write_ht"><code>logical :: tran_write_ht</code><a class="headerlink" href="#logical-tran_write_ht" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#tran_write_ht#=\verb#true#\)</span>, then the Hamiltonian matrix
+formatted for the transport calculation will be written to a file
+<code>seedname_htB.dat</code>.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="logical-tran_read_ht"><code>logical :: tran_read_ht</code><a class="headerlink" href="#logical-tran_read_ht" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#tran_write_ht#=\verb#true#\)</span>, then the Hamiltonian matrix
+formatted for the transport calculation will be read from a set of files
+described in the parameter <code>transport_mode</code>. Set
+<span class="arithmatex">\(\verb#tran_write_ht#=\verb#false#\)</span> to perform automated lcr
+calculations (see Section <a href="#sec:2c2">7.3</a>{reference-type="ref"
+reference="sec:2c2"}).</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="logical-tran_use_same_lead"><code>logical :: tran_use_same_lead</code><a class="headerlink" href="#logical-tran_use_same_lead" title="Permanent link">&para;</a></h3>
+<p>If <span class="arithmatex">\(\verb#tran_use_same_lead#=\verb#true#\)</span>, then the left and the right
+leads are the same. In this case, <code>seedname_htR.dat</code> is not required.</p>
+<p>The default value is <code>true</code>.</p>
+<h3 id="realkinddp-tran_group_threshold"><code>real(kind=dp) :: tran_group_threshold</code><a class="headerlink" href="#realkinddp-tran_group_threshold" title="Permanent link">&para;</a></h3>
+<p>Used to group and sort Wannier functions according to the positions of
+their centres. Wannier functions in a group are within
+<code>tran_group_threshold</code> from one another in <code>x,y</code> and <code>z</code> directions.
+Units are Å</p>
+<p>The default is 0.15</p>
+<h3 id="realkinddp-translation_centre_frac3"><code>real(kind=dp) :: translation_centre_frac(3)</code><a class="headerlink" href="#realkinddp-translation_centre_frac3" title="Permanent link">&para;</a></h3>
+<p>Centre of the unit cell to which the final Wannier centres are
+translated. Numbers are in fractional coordinates with respect to the
+lattice vectors.</p>
+<p>The default value is (0.0,0.0,0.0).</p>
+<h3 id="logical-use_ws_distance"><code>logical :: use_ws_distance</code><a class="headerlink" href="#logical-use_ws_distance" title="Permanent link">&para;</a></h3>
+<p>Improves the interpolation of the k-space Hamiltonian, by applying a
+translation to each WF by a basis vector of the super-lattice that
+minimises the distance between their centres. The translation is
+dependent on both WF and on the unit cell vector to which they belong,
+i.e., translate function <span class="arithmatex">\(W_j({\bf r}-{\bf R})\)</span> inside the Wigner-Seitz
+cell centred on WF <span class="arithmatex">\(W_i({\bf r})\)</span>.</p>
+<p>For a longer explanation, see
+Chapter <a href="#chap:interpolation">[chap:interpolation]</a>{reference-type="ref"
+reference="chap:interpolation"}.</p>
+<p>If <code>false</code> the code puts all the WF in the home cell, only possible
+choice until wannier90 v2.0.1.</p>
+<p>The default value is <code>true</code> (default changed since v.3.0). Introduced in
+v2.1.</p>
+<h3 id="realkinddp-ws_distance_tol"><code>real(kind=dp) :: ws_distance_tol</code><a class="headerlink" href="#realkinddp-ws_distance_tol" title="Permanent link">&para;</a></h3>
+<p>Tolerance when determining whether two values
+<span class="arithmatex">\(\|\mathbf{d}_{ij\mathbf{R}} + \tilde{\mathbf{R}}_{nml} \|\)</span> and
+<span class="arithmatex">\(\|\mathbf{d}_{ij\mathbf{R}} + \tilde{\mathbf{R}}_{n'm'l'} \|\)</span> (as
+defined in
+chapter <a href="#chap:interpolation">[chap:interpolation]</a>{reference-type="ref"
+reference="chap:interpolation"}) for the shortest distance between two
+Wannier functions are equivalent. If the difference in distance (in
+Angstrom) is less than <code>ws_distance_tol</code>, they are taken to be
+equivalent.</p>
+<p>The default value is <span class="arithmatex">\(10^{-5}\)</span>.</p>
+<h3 id="ws_search_size"><code>:: ws_search_size</code><a class="headerlink" href="#ws_search_size" title="Permanent link">&para;</a></h3>
+<p>Maximum absolute value for the integers <span class="arithmatex">\(n,m,l\)</span> that identify the
+super-lattice vectors <span class="arithmatex">\(\tilde{\mathbf{R}}_{nml}\)</span> (see
+chapter <a href="#chap:interpolation">[chap:interpolation]</a>{reference-type="ref"
+reference="chap:interpolation"}) when searching for points inside the
+Wigner-Seitz cell. If <code>ws_search_size</code> is provided as a single integer,
+then the number of repetitions of the Born-von Karman cell is the same
+along all three linear dimensions; otherwise, if three integers are
+provided, the number of repetitions along the <span class="arithmatex">\(i-\)</span>th linear dimension is
+<code>ws_search_size(i)</code>. The variable is used both in <code>hamiltonian.F90</code> and
+in <code>ws_distance.F90</code>. In the latter case, its value is incremented by
+one in order to account for WFs whose centre wanders away from the
+original reference unit cell.\
+The default value is generally sufficient, but might need to be
+increased in case of elongated cells.</p>
+<p>The default value is 2.</p>
+<h3 id="logical-write_u_matrices"><code>logical :: write_u_matrices</code><a class="headerlink" href="#logical-write_u_matrices" title="Permanent link">&para;</a></h3>
+<p>Write the <span class="arithmatex">\(\mathbf{U}^{(\mathbf{k})}\)</span> and
+<span class="arithmatex">\(\mathbf{U}^{\mathrm{dis}(\mathbf{k})}\)</span> matrices obtained at the end of
+wannierization to files <code>seedname_u.mat</code> and <code>seedname_u_dis.mat</code>,
+respectively.</p>
+<p>The default value is <code>false</code>.</p>
+<h3 id="realkinddp-hr_cutoff"><code>real(kind=dp) :: hr_cutoff</code><a class="headerlink" href="#realkinddp-hr_cutoff" title="Permanent link">&para;</a></h3>
+<p>The absolute value of the smallest matrix element of the Hamiltonian in
+the WF basis. If <span class="arithmatex">\(h_{mn}(\mathbf{R})&gt;\:\)</span><code>hr_cutoff</code>, then the matrix
+element <span class="arithmatex">\(h_{mn}(\mathbf{R})\)</span> is retained and used in the band structure
+interpolation (when <span class="arithmatex">\(\verb#bands_plot_mode#=\verb#cut#\)</span>) or in the
+transport calculation. Otherwise it is deemed to be insignificant and is
+discarded. Units are eV.</p>
+<p>The default value is 0.0.</p>
+<h3 id="realkinddp-dist_cutoff"><code>real(kind=dp) :: dist_cutoff</code><a class="headerlink" href="#realkinddp-dist_cutoff" title="Permanent link">&para;</a></h3>
+<p>The largest distance between two WFs for which the Hamiltonian matrix
+element is retained and used in the band interpolation (when
+<span class="arithmatex">\(\verb#bands_plot_mode#=\verb#cut#\)</span>) or in the transport calculation.
+Units are Å.</p>
+<p>The default value is 1000.0.</p>
+<h3 id="characterlen20-dist_cutoff_mode"><code>character(len=20) :: dist_cutoff_mode</code><a class="headerlink" href="#characterlen20-dist_cutoff_mode" title="Permanent link">&para;</a></h3>
+<p>Dimension in which the distance between two WFs is calculated. The
+vector connecting two WFs may be projected to a line (<code>one_dim</code>) or a
+plane (<code>two_dim</code>). The size of the projected vector is calculated, and
+<code>dist_cutoff</code> is applied. When <code>one_dim</code> or <code>two_dim</code> is used,
+<code>one_dim_axis</code> must be given to specify extended or confined direction.</p>
+<p>The valid options for this parameter are:</p>
+<ul>
+<li>
+<p><code>three_dim</code> (default)</p>
+</li>
+<li>
+<p><code>two_dim</code></p>
+</li>
+<li>
+<p><code>one_dim</code></p>
+</li>
+</ul>
+<h3 id="characterlen20-one_dim_axis"><code>character(len=20) :: one_dim_axis</code><a class="headerlink" href="#characterlen20-one_dim_axis" title="Permanent link">&para;</a></h3>
+<p>Extended direction for a one-dimensional system or confined direction
+for a two-dimensional system. This direction must be parallel to one of
+the Cartesian axes.</p>
+<p>The valid options for this parameter are:</p>
+<ul>
+<li>
+<p><code>x</code></p>
+</li>
+<li>
+<p><code>y</code></p>
+</li>
+<li>
+<p><code>z</code></p>
+</li>
+</ul>
+<p>No default.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:ref1">
+<p>N. Marzari and D. Vanderbilt. Maximally localized generalized wannier functions for composite energy bands. <em>Phys. Rev. B</em>, 56:12847, 1997.&#160;<a class="footnote-backref" href="#fnref:ref1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:ref1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref2">
+<p>F. Gygi, J. L. Fattebert, and E. Schwegler. Computation of maximally localized wannier functions using a simultaneous diagonalization algorithm. <em>Comput. Phys. Commun.</em>, 155:1&ndash;6, 2003.&#160;<a class="footnote-backref" href="#fnref:ref2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref3">
+<p>I. Souza, N. Marzari, and D. Vanderbilt. Maximally localized wannier functions for entangled energy bands. <em>Phys. Rev. B</em>, 65:035109, 2001.&#160;<a class="footnote-backref" href="#fnref:ref3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:ref3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref4">
+<p>R. Sakuma. Symmetry-adapted wannier functions in the maximal localization procedure. <em>Phys. Rev. B</em>, 87:235109, 2013.&#160;<a class="footnote-backref" href="#fnref:ref4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:ref4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:ref4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref5">
+<p>Runzhi Wang, Emanuel A. Lazar, Hyowon Park, Andrew J. Millis, and Chris A. Marianetti. Selectively localized wannier functions. <em>Physical Review B</em>, 10 2014. <a href="https://doi.org/10.1103/PhysRevB.90.165125">doi:10.1103/PhysRevB.90.165125</a>.&#160;<a class="footnote-backref" href="#fnref:ref5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:ref5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref6">
+<p>Marco Buongiorno Nardelli. Electronic transport in extended systems: application to carbon nanotubes. <em>Phys. Rev. B</em>, 60:7828, 1999.&#160;<a class="footnote-backref" href="#fnref:ref6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-02-22T18:46:26+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-02-22</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-02-22T18:46:26+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-02-22</span>
+  </span>
+
+    
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/qiaojunfeng" class="md-author" title="@qiaojunfeng">
+          
+          <img src="https://avatars.githubusercontent.com/u/22841309?v=4&size=72" alt="qiaojunfeng">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../methodology/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Methodology">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Methodology
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../projections/" class="md-footer__link md-footer__link--next" aria-label="Next: Projections">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Projections
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2024 Wannier90 Developers
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/wannier-developers/wannier90" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.code.select", "content.footnote.tooltips", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      
+        <script src="../../../js/timeago.min.js"></script>
+      
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
