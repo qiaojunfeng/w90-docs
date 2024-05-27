@@ -1,0 +1,3 @@
+[submodule "wannier-tutorials"]
+	path = wannier-tutorials
+	url = git@github.com:qiaojunfeng/wannier-tutorials.git
