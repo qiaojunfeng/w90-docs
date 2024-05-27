@@ -1,4 +1,4 @@
-# Graphene — Projectability-disentangled Wannier functions
+# 1: Graphene — Projectability-disentangled Wannier functions
 
 ## Outline
 
@@ -57,8 +57,11 @@ on the methodology, see Ref.[@Qiao2023-pdwf].
 
 5. Run `plotband.x` to plot the band structure with projectability for
     graphene
-    (note: run `plotband.x` interactively to see the meaning of each
-    line in the input file)
+
+    !!! note
+
+        Run `plotband.x` interactively to see the meaning of each line in the
+        input file.
 
     1. First rename file so that it can be recognized by `plotband.x`
 
@@ -99,9 +102,12 @@ on the methodology, see Ref.[@Qiao2023-pdwf].
 
 7. Run `pw.x` to generate a list of the required overlaps (written into the
     `graphene.nnkp` file).
-    (note: see `win` input file, no need to specify initial projections,
-    they are automatically chosen from the pseudo-atomic orbitals inside
-    pseudopotentials used in the scf calculation)
+
+    !!! note
+
+        See `win` input file, no need to specify initial projections,
+        they are automatically chosen from the pseudo-atomic orbitals inside
+        pseudopotentials used in the scf calculation.
 
     ```bash title="Terminal"
     wannier90.x -pp graphene

@@ -14,6 +14,7 @@ nav:
   - Home: "index.md"
   - "Tutorials":
       - "1: Graphene — Projectability-disentangled Wannier functions": "tutorials/ex1.md"
+      - "2: Silicon — Projectability-disentangled Wannier functions with custom projectors": "tutorials/ex2.md"
 
 theme:
   name: material
