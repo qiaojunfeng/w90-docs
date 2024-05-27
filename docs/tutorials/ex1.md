@@ -1,4 +1,4 @@
-# 34: Graphene — Projectability-disentangled Wannier functions
+# Graphene — Projectability-disentangled Wannier functions
 
 - Outline: *Obtain MLWFs for graphene using projectability
     disentanglement. For more details on the methodology, see
@@ -132,7 +132,10 @@
 
     <figure markdown="span" id="fig:graphene_bandsdiff">
     ![Image title](./graphene_projbands.webp){width="500"}
-    <figcaption markdown="span">Band structure of graphene with projectability.
+    ![Image title](./graphene_bandsdiff.webp){width="500"}
+    <figcaption markdown="span">
+    Left: band structure of graphene with projectability.
+    Right: comparison of DFT and Wannier bands.
     </figcaption>
     </figure>
 
