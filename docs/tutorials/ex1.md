@@ -1,33 +1,32 @@
 # Graphene — Projectability-disentangled Wannier functions
 
-- Outline: *Obtain MLWFs for graphene using projectability
-    disentanglement. For more details on the methodology, see
-    Ref.[@Qiao2023-pdwf]*
+## Outline
+
+Obtain MLWFs for graphene using projectability disentanglement. For more details
+on the methodology, see Ref.[@Qiao2023-pdwf].
+
+## Input files
 
 - Directory: `examples/example34/`
 
-- Input Files:
+- `graphene.scf` The `pw.x` input file for ground state calculation
 
-    - `graphene.scf` *The `pw.x` input file for ground state calculation*
+- `graphene.bands` The `pw.x` input file for band structure calculation
 
-    - `graphene.bands` *The `pw.x` input file for band structure
-        calculation*
+- `graphene.bandsx` The `bands.x` input file for extracting band structure
+    eigenvalues
 
-    - `graphene.bandsx` *The `bands.x` input file for extracting band
-        structure eigenvalues*
+- `graphene.projwfc` The `projwfc.x` input file for projectability calculation
 
-    - `graphene.projwfc` *The `projwfc.x` input file for
-        projectability calculation*
+- `graphene.plotband` The `plotband.x` input file for plotting
+    band structure
 
-    - `graphene.plotband` *The `plotband.x` input file for plotting
-        band structure*
+- `graphene.nscf` The `pw.x` input file to obtain Bloch states on a
+    uniform grid
 
-    - `graphene.nscf` *The `pw.x` input file to obtain Bloch states on a
-        uniform grid*
+- `graphene.pw2wan` Input file for `pw2wannier90.x`
 
-    - `graphene.pw2wan` *Input file for `pw2wannier90.x`*
-
-    - `graphene.win` *The `wannier90.x` input file*
+- `graphene.win` The `wannier90.x` input file
 
 ## Steps
 
@@ -79,12 +78,18 @@
         gnuplot graphene.projbands.gnu
         ```
 
-    4. Generate a `graphene.projbands.gnu_projected.pdf` file, see
-        Fig. [graphene_projbands](#fig:graphene_projbands)
+    4. Generate a `graphene.projbands.gnu_projected.pdf` file, see the following
+        Fig. [Projected bands](#fig:graphene_projbands)
 
         ```bash title="Terminal"
         ps2pdf graphene.projbands.gnu_projected.ps
         ```
+
+        <figure markdown="span" id="fig:graphene_projbands">
+        ![Projected bands](./graphene_projbands.webp){width="500"}
+        <figcaption markdown="span">Band structure of graphene with projectability.
+        </figcaption>
+        </figure>
 
 6. Run `pw.x` to obtain the Bloch states on a uniform k-point grid
 
@@ -117,8 +122,8 @@
     ```
 
 10. Run `gnuplot` to compare DFT and Wannier-interpolated bands, this
-    will generate a PDF file `graphene_bandsdiff.pdf`, see
-    Fig. [graphene_bandsdiff](#fig:graphene_bandsdiff).
+    will generate a PDF file `graphene_bandsdiff.pdf`, see the following
+    Fig. [Bands comparison](#fig:graphene_bandsdiff).
 
     ```bash title="Terminal"
     ./graphene_bandsdiff.gnu
@@ -131,11 +136,8 @@
     band interpolations.
 
     <figure markdown="span" id="fig:graphene_bandsdiff">
-    ![Image title](./graphene_projbands.webp){width="500"}
-    ![Image title](./graphene_bandsdiff.webp){width="500"}
-    <figcaption markdown="span">
-    Left: band structure of graphene with projectability.
-    Right: comparison of DFT and Wannier bands.
+    ![Bands diff](./graphene_bandsdiff.webp){width="500"}
+    <figcaption markdown="span">Comparison of DFT and Wannier bands.
     </figcaption>
     </figure>
 
