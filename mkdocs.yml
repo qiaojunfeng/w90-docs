@@ -1,39 +1,76 @@
-site_name: Wannier90
-# site_url: https://example.com/
+site_name: Wannier90 Documentation
+site_url: https://wannier90.readthedocs.io/
+# site_url: https://wannier.org/
 site_author: Wannier90 Developers
 site_description: >-
-  Everything about wannier90...
+  Wannier90 user guide and tutorials
 
 repo_name: wannier-developers/wannier90
 repo_url: https://github.com/wannier-developers/wannier90
-edit_uri: https://github.com/qiaojunfeng/w90-docs/edit/main/docs
-view_uri: https://github.com/qiaojunfeng/w90-docs/raw/main/docs
 
-copyright: Copyright &copy; 2016 - 2024 Wannier90 Developers
+copyright: Copyright &copy; 2006 - 2024 Wannier90 Developers
 
 nav:
-   - Home: 'index.md'
-   - 'User guide':
-      - 'Introduction': "user_guide/introduction.md"
-      - 'wannier90.x':
-        - "Methodology": "user_guide/wannier90/methodology.md"
-        - "Parameters": "user_guide/wannier90/parameters.md"
-        - "Projections": "user_guide/wannier90/projections.md"
-        - "Code overview": "user_guide/wannier90/code_overview.md"
-        - "Post-processing": "user_guide/wannier90/postproc.md"
-        - "Library mode": "user_guide/wannier90/library_mode.md"
-        - "Transport": "user_guide/wannier90/transport.md"
-        - "Files": "user_guide/wannier90/files.md"
-        - "Notes on interpolations": "user_guide/wannier90/notes_interpolations.md"
-        - "Sample inputs": "user_guide/wannier90/sample_inputs.md"
-      - 'postw90.x':
-        - "Berry": "user_guide/postw90/berry.md"
-        - "Gyrotropic": "user_guide/postw90/gyrotropic.md"
-        - "BoltzWann": "user_guide/postw90/boltzwann.md"
-        - "Generic Band interpolation": "user_guide/postw90/geninterp.md"
-      - "Appendices": 
-        - "Utilities": "user_guide/appendices/utilities.md"
-        - "FAQs": "user_guide/appendices/faq.md"
+  - Home: "index.md"
+  - "User guide":
+      - "Introduction": "user_guide/introduction.md"
+      - "wannier90.x":
+          - "Methodology": "user_guide/wannier90/methodology.md"
+          - "Parameters": "user_guide/wannier90/parameters.md"
+          - "Projections": "user_guide/wannier90/projections.md"
+          - "Code overview": "user_guide/wannier90/code_overview.md"
+          - "Post-processing": "user_guide/wannier90/postproc.md"
+          - "Library mode": "user_guide/wannier90/library_mode.md"
+          - "Transport": "user_guide/wannier90/transport.md"
+          - "Files": "user_guide/wannier90/files.md"
+          - "Notes on interpolations": "user_guide/wannier90/notes_interpolations.md"
+          - "Sample inputs": "user_guide/wannier90/sample_inputs.md"
+      - "postw90.x":
+          - "Parameters": "user_guide/postw90/postw90params.md"
+          - "Berry": "user_guide/postw90/berry.md"
+          - "Gyrotropic": "user_guide/postw90/gyrotropic.md"
+          - "BoltzWann": "user_guide/postw90/boltzwann.md"
+          - "Generic Band interpolation": "user_guide/postw90/geninterp.md"
+      - "Appendices":
+          - "Utilities": "user_guide/appendices/utilities.md"
+          - "FAQs": "user_guide/appendices/faq.md"
+  - "Tutorials":
+      - "Preliminaries": "tutorials/preliminaries.md"
+      # - "1: Gallium Arsenide &#151; MLWFs for the valence bands": "tutorials/tutorial_1.md"
+      # - "2: Lead &#151; Wannier-interpolated Fermi surface": "tutorials/tutorial_2.md"
+      # - "3: Silicon &#151; Disentangled MLWFs": "tutorials/tutorial_3.md"
+      # - "4: Copper &#151; Fermi surface, orbital character of energy bands": "tutorials/tutorial_4.md"
+      # - "Tutorials with the pwscf Interface": "tutorials/with_pwscf.md"
+      # - "5: Diamond &#151; MLWFs for the valence bands": "tutorials/tutorial_5.md"
+      # - "6: Copper &#151; Fermi surface": "tutorials/tutorial_6.md"
+      # - "7: Silane (SiH₄) &#151; Molecular MLWFs using Γ-point sampling": "tutorials/tutorial_7.md"
+      # - "8: Iron &#151; Spin-polarized WFs, DOS, projected WFs versus MLWFs": "tutorials/tutorial_8.md"
+      # - "9: Cubic BaTiO₃": "tutorials/tutorial_9.md"
+      # - "10: Graphite": "tutorials/tutorial_10.md"
+      # - "11: Silicon &#151; Valence and low-lying conduction states": "tutorials/tutorial_11.md"
+      # - "12: Benzene &#151; Valence and low-lying conduction states": "tutorials/tutorial_12.md"
+      # - "13: (5,5) Carbon Nanotube &#151; Transport properties": "tutorials/tutorial_13.md"
+      # - "14: Linear Sodium Chain &#151; Transport properties": "tutorials/tutorial_14.md"
+      # - "15: (5,0) Carbon Nanotube &#151; Transport properties": "tutorials/tutorial_15.md"
+      # - "16: Silicon &#151; Boltzmann transport": "tutorials/tutorial_16.md"
+      # - "17: Iron &#151; Spin-orbit-coupled bands and Fermi-surface contours": "tutorials/tutorial_17.md"
+      # - "18: Iron &#151; Berry curvature, anomalous Hall conductivity and optical conductivity": "tutorials/tutorial_18.md"
+      # - "19: Iron &#151; Orbital magnetization": "tutorials/tutorial_19.md"
+      # - "20: Disentanglement restricted inside spherical regions of k space": "tutorials/tutorial_20.md"
+      # - "21: Gallium Arsenide &#151; Symmetry-adapted Wannier functions": "tutorials/tutorial_21.md"
+      # - "22: Copper &#151; Symmetry-adapted Wannier function": "tutorials/tutorial_22.md"
+      # - "23: Silicon &#151; G₀W₀ bands structure interpolation": "tutorials/tutorial_23.md"
+      # - "24: Tellurium &#151; gyrotropic effect": "tutorials/tutorial_24.md"
+      # - "25: Gallium Arsenide &#151; Nonlinear shift current": "tutorials/tutorial_25.md"
+      # - "26: Gallium Arsenide &#151; Selective localization and constrained centres": "tutorials/tutorial_26.md"
+      # - "27: Silicon &#151; Selected columns of density matrix algorithm for automated MLWFs": "tutorials/tutorial_27.md"
+      # - "28: Diamond &#151; plotting of MLWFs using Gaussian cube format and VESTA": "tutorials/tutorial_28.md"
+      # - "29: Platinum &#151; Spin Hall conductivity": "tutorials/tutorial_29.md"
+      # - "30: Gallium Arsenide &#151; Frequency-dependent spin Hall conductivity": "tutorials/tutorial_30.md"
+      # - "31: Platinum &#151; Selected columns of density matrix algorithm for spinor wavefunctions": "tutorials/tutorial_31.md"
+      # - "32: Tungsten &#151; SCDM parameters from projectability": "tutorials/tutorial_32.md"
+      # - "33: Monolayer BC₂N &#151; k&middot;p expansion coefficients": "tutorials/tutorial_33.md"
+      - "34: Graphene — Projectability-disentangled Wannier functions": "tutorials/ex1.md"
 
 theme:
   name: material
@@ -72,7 +109,7 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
+      primary: custom
       accent: indigo
       toggle:
         icon: material/toggle-switch
@@ -87,17 +124,16 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
-  icon:
-    logo: logo
+  logo: assets/wannier-logo-squared.svg
+  favicon: assets/wannier-logo-squared.png
 
 extra:
   status:
     new: Recently added
     deprecated: Deprecated
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
+  # analytics:
+  #   provider: google
+  #   property: !ENV GOOGLE_ANALYTICS_KEY
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/wannier-developers/wannier90
@@ -109,6 +145,7 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
+  - tables
   - toc:
       permalink: true
   - pymdownx.arithmatex:
@@ -156,17 +193,54 @@ plugins:
       enable_creation_date: true
       type: timeago
   - git-committers:
-      repository: qiaojunfeng/w90-docs
-      branch: main
+      # enabled: !ENV ["ENABLE_MKDOCS_GIT_COMMITTERS"]
+      repository: wannier-developers/wannier90
+      branch: develop
+      token: !ENV ["GITHUB_TOKEN"]
   - search
+  - glightbox
   - bibtex:
-      bib_file: "refs.bib"
-      footnote_format: "ref{number}" # default "{number}", to avoid conflict with user-defined footnotes
+      # `bib_file` takes precedence over `bib_dir`, if `bib_file` is defined,
+      # the bibtex plugin will use an absolute path to the file, meaning that
+      # we can only execute `mkdocs build` in the folder `REPO_root/docs`.
+      # With `bib_dir` the bibtex plugin will use a relative path to the
+      # `mkdocs.yml` file, and search recursively for all the bib files.
+      # Therefore, it is possible to execute `mkdocs build` in both the
+      # `REPO_root` and the `REPO_root/docs` folder, then readthedocs can build
+      # the docs (since readthedocs always builds the docs in the `REPO_root`).
+      # bib_file: refs.bib
+      bib_dir: .
+      # default "{number}", to avoid conflict with user-defined footnotes
+      footnote_format: "ref{number}"
+  - exporter
+  - exporter-pdf:
+      # skip generating PDFs if the MKDOCS_EXPORTER_ENABLED environment variable
+      # is not true, to speed up development
+      enabled: !ENV [MKDOCS_EXPORTER_ENABLED, true]
+      concurrency: 8
+      # covers:
+      #   front: resources/templates/covers/front.html.j2
+      #   back: resources/templates/covers/back.html.j2
+      # stylesheets:
+      #   - resources/stylesheets/pdf.scss
+  - exporter-extras:
+      buttons:
+        - title: Download as PDF
+          enabled: !!python/name:mkdocs_exporter.plugins.pdf.button.enabled
+          icon: !!python/name:mkdocs_exporter.plugins.pdf.button.icon
+          attributes:
+            href: !!python/name:mkdocs_exporter.plugins.pdf.button.href
+            download: !!python/name:mkdocs_exporter.plugins.pdf.button.download
 
 extra_javascript:
-  - javascripts/katex.js
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - javascripts/mathjax.js
+  - javascripts/mkdocs-exporter.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # - javascripts/katex.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
 
 extra_css:
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - stylesheets/custom.css
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
