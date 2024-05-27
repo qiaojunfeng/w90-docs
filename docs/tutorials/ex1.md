@@ -7,26 +7,74 @@ on the methodology, see Ref.[@Qiao2023-pdwf].
 
 ## Input files
 
-- Directory: `examples/example34/`
+- Directory: `Sat/ex1/`
 
 - `graphene.scf` The `pw.x` input file for ground state calculation
 
+    ??? quote "graphene.scf"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.scf"
+        ```
+
 - `graphene.bands` The `pw.x` input file for band structure calculation
+
+    ??? quote "graphene.bands"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.bands"
+        ```
 
 - `graphene.bandsx` The `bands.x` input file for extracting band structure
     eigenvalues
 
+    ??? quote "graphene.bandsx"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.bandsx"
+        ```
+
 - `graphene.projwfc` The `projwfc.x` input file for projectability calculation
+
+    ??? quote "graphene.projwfc"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.projwfc"
+        ```
 
 - `graphene.plotband` The `plotband.x` input file for plotting
     band structure
 
+    ??? quote "graphene.plotband"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.plotband"
+        ```
+
 - `graphene.nscf` The `pw.x` input file to obtain Bloch states on a
     uniform grid
 
+    ??? quote "graphene.nscf"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.nscf"
+        ```
+
 - `graphene.pw2wan` Input file for `pw2wannier90.x`
 
+    ??? quote "graphene.pw2wan"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.pw2wan"
+        ```
+
 - `graphene.win` The `wannier90.x` input file
+
+    ??? quote "graphene.win"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.win"
+        ```
 
 ## Steps
 

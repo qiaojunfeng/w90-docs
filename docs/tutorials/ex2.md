@@ -8,17 +8,47 @@ the methodology, see Ref.[@Qiao2023-pdwf].
 
 ## Input files
 
-- Directory: `examples/example35/`
+- Directory: `Sat/ex2/`
 
 - `silicon.scf` The `pw.x` input file for ground state calculation
 
+    ??? quote "silicon.scf"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.scf"
+        ```
+
 - `silicon.bands` The `pw.x` input file for band structure calculation
+
+    ??? quote "silicon.bands"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.bands"
+        ```
 
 - `silicon.nscf` The `pw.x` input file to obtain Bloch states on a uniform grid
 
+    ??? quote "silicon.nscf"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.nscf"
+        ```
+
 - `silicon.pw2wan` Input file for `pw2wannier90.x`
 
+    ??? quote "silicon.pw2wan"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.pw2wan"
+        ```
+
 - `silicon.win` The `wannier90.x` input file
+
+    ??? quote "silicon.win"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.win"
+        ```
 
 ## Steps
 
