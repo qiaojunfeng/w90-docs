@@ -15,6 +15,7 @@ nav:
   - "Tutorials":
       - "1: Graphene — Projectability-disentangled Wannier functions": "tutorials/ex1.md"
       - "2: Silicon — Projectability-disentangled Wannier functions with custom projectors": "tutorials/ex2.md"
+      - "3: Silicon — Manifold-remixed Wannier functions": "tutorials/ex3.md"
 
 theme:
   name: material

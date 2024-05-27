@@ -26,6 +26,14 @@ the methodology, see Ref.[@Qiao2023-pdwf].
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.bands"
         ```
 
+- `silicon.bandsx` The `bands.x` input file for extracting band structure eigenvalues
+
+    ??? quote "silicon.bandsx"
+
+        ```fortran title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.bandsx"
+        ```
+
 - `silicon.nscf` The `pw.x` input file to obtain Bloch states on a uniform grid
 
     ??? quote "silicon.nscf"
@@ -48,6 +56,14 @@ the methodology, see Ref.[@Qiao2023-pdwf].
 
         ```fortran title="Input file"
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.win"
+        ```
+
+- `silicon_bandsdiff.gnu` The gnuplot script to compare DFT and Wannier bands
+
+    ??? quote "silicon_bandsdiff.gnu"
+
+        ```gnuplot title="Gnuplot script"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon_bandsdiff.gnu"
         ```
 
 ## Steps
@@ -113,7 +129,7 @@ the methodology, see Ref.[@Qiao2023-pdwf].
     ```
 
     <figure markdown="span" id="fig:silicon_bandsdiff">
-    ![Bands diff](./silicon_bandsdiff.webp){width="500"}
+    ![Bands diff](./silicon_bandsdiff_spd.webp){width="500"}
     <figcaption markdown="span">Comparison of DFT and Wannier bands for silicon.
     </figcaption>
     </figure>

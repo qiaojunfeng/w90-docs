@@ -76,6 +76,14 @@ on the methodology, see Ref.[@Qiao2023-pdwf].
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.win"
         ```
 
+- `graphene_bandsdiff.gnu` The gnuplot script to compare DFT and Wannier bands
+
+    ??? quote "graphene_bandsdiff.gnu"
+
+        ```gnuplot title="Gnuplot script"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene_bandsdiff.gnu"
+        ```
+
 ## Steps
 
 1. Run `pw.x` to obtain the ground state of graphene
