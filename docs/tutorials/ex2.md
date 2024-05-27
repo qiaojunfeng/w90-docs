@@ -14,7 +14,7 @@ the methodology, see Ref.[@Qiao2023-pdwf].
 
     ??? quote "silicon.scf"
 
-        ```fortran title="Input file"
+        ```fortran linenums="1" title="Input file"
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.scf"
         ```
 
@@ -22,15 +22,17 @@ the methodology, see Ref.[@Qiao2023-pdwf].
 
     ??? quote "silicon.bands"
 
-        ```fortran title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.bands"
+        ```fortran linenums="1" title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.bands::45"
+        ...
+        ...
         ```
 
 - `silicon.bandsx` The `bands.x` input file for extracting band structure eigenvalues
 
     ??? quote "silicon.bandsx"
 
-        ```fortran title="Input file"
+        ```fortran linenums="1" title="Input file"
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.bandsx"
         ```
 
@@ -38,15 +40,17 @@ the methodology, see Ref.[@Qiao2023-pdwf].
 
     ??? quote "silicon.nscf"
 
-        ```fortran title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.nscf"
+        ```fortran linenums="1" title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.nscf::45"
+        ...
+        ...
         ```
 
 - `silicon.pw2wan` Input file for `pw2wannier90.x`
 
     ??? quote "silicon.pw2wan"
 
-        ```fortran title="Input file"
+        ```fortran linenums="1" title="Input file"
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.pw2wan"
         ```
 
@@ -54,15 +58,17 @@ the methodology, see Ref.[@Qiao2023-pdwf].
 
     ??? quote "silicon.win"
 
-        ```fortran title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.win"
+        ```fortran linenums="1" title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.win::50"
+        ...
+        ...
         ```
 
 - `silicon_bandsdiff.gnu` The gnuplot script to compare DFT and Wannier bands
 
     ??? quote "silicon_bandsdiff.gnu"
 
-        ```gnuplot title="Gnuplot script"
+        ```gnuplot linenums="1" title="Gnuplot script"
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon_bandsdiff.gnu"
         ```
 
@@ -145,12 +151,8 @@ the methodology, see Ref.[@Qiao2023-pdwf].
 1. Try changing the `atom_proj_exclude` in `silicon.pw2wan` file, i.e.,
     these commented lines
 
-    ```fortran title="Input file" hl_lines="5"
-    ! for excluding specific projectors
-    ! this excludes 3d projectors, then the results are similar
-    ! to that of using UPF file, i.e., project onto Si s+p orbitals
-    ! for the indices of orbitals, see the pw2wan stdout
-    ! atom_proj_exclude = 5 6 7 8 9 14 15 16 17 18
+    ```fortran linenums="10" title="Input file" hl_lines="5"
+    --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.pw2wan:10:14"
     ```
 
 2. Now that $3d$ projectors provide us a larger space for optimization,

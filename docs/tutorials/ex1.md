@@ -13,7 +13,7 @@ on the methodology, see Ref.[@Qiao2023-pdwf].
 
     ??? quote "graphene.scf"
 
-        ```fortran title="Input file"
+        ```fortran linenums="1" title="Input file"
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.scf"
         ```
 
@@ -21,8 +21,10 @@ on the methodology, see Ref.[@Qiao2023-pdwf].
 
     ??? quote "graphene.bands"
 
-        ```fortran title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.bands"
+        ```fortran linenums="1" title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.bands::48"
+        ...
+        ...
         ```
 
 - `graphene.bandsx` The `bands.x` input file for extracting band structure
@@ -30,7 +32,7 @@ on the methodology, see Ref.[@Qiao2023-pdwf].
 
     ??? quote "graphene.bandsx"
 
-        ```fortran title="Input file"
+        ```fortran linenums="1" title="Input file"
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.bandsx"
         ```
 
@@ -38,7 +40,7 @@ on the methodology, see Ref.[@Qiao2023-pdwf].
 
     ??? quote "graphene.projwfc"
 
-        ```fortran title="Input file"
+        ```fortran linenums="1" title="Input file"
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.projwfc"
         ```
 
@@ -47,7 +49,7 @@ on the methodology, see Ref.[@Qiao2023-pdwf].
 
     ??? quote "graphene.plotband"
 
-        ```fortran title="Input file"
+        ```fortran linenums="1" title="Input file"
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.plotband"
         ```
 
@@ -56,15 +58,17 @@ on the methodology, see Ref.[@Qiao2023-pdwf].
 
     ??? quote "graphene.nscf"
 
-        ```fortran title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.nscf"
+        ```fortran linenums="1" title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.nscf::48"
+        ...
+        ...
         ```
 
 - `graphene.pw2wan` Input file for `pw2wannier90.x`
 
     ??? quote "graphene.pw2wan"
 
-        ```fortran title="Input file"
+        ```fortran linenums="1" title="Input file"
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.pw2wan"
         ```
 
@@ -72,15 +76,17 @@ on the methodology, see Ref.[@Qiao2023-pdwf].
 
     ??? quote "graphene.win"
 
-        ```fortran title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.win"
+        ```fortran linenums="1" title="Input file"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene.win::55"
+        ...
+        ...
         ```
 
 - `graphene_bandsdiff.gnu` The gnuplot script to compare DFT and Wannier bands
 
     ??? quote "graphene_bandsdiff.gnu"
 
-        ```gnuplot title="Gnuplot script"
+        ```gnuplot linenums="1" title="Gnuplot script"
         --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex1/graphene_bandsdiff.gnu"
         ```
 
