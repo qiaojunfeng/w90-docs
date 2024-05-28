@@ -119,12 +119,6 @@ functions (MRWF). For more details on the methodology, see Ref.[@Qiao2023-mrwf].
 5. Run `pw.x` to generate a list of the required overlaps (written into the
     `silicon.nnkp` file).
 
-    !!! note
-
-        See `win` input file, no need to specify initial projections,
-        they are chosen from the pseudo-atomic orbitals inside the
-        `ext_proj/Si.dat` file.
-
     ```bash title="Terminal"
     wannier90.x -pp silicon
     ```
