@@ -7,14 +7,14 @@ functions (MRWF). For more details on the methodology, see Ref.[@Qiao2023-mrwf].
 
 ## Input files
 
-- Directory: `Sat/ex3/`
+- Directory: `ex3/`
 
 - `silicon.scf` The `pw.x` input file for ground state calculation
 
     ??? quote "silicon.scf"
 
         ```fortran linenums="1" title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex3/silicon.scf"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex3/silicon.scf"
         ```
 
 - `silicon.bands` The `pw.x` input file for band structure calculation
@@ -22,7 +22,7 @@ functions (MRWF). For more details on the methodology, see Ref.[@Qiao2023-mrwf].
     ??? quote "silicon.bands"
 
         ```fortran linenums="1" title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex3/silicon.bands::45"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex3/silicon.bands::45"
         ...
         ...
         ```
@@ -32,7 +32,7 @@ functions (MRWF). For more details on the methodology, see Ref.[@Qiao2023-mrwf].
     ??? quote "silicon.nscf"
 
         ```fortran linenums="1" title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex3/silicon.nscf::45"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex3/silicon.nscf::45"
         ...
         ...
         ```
@@ -42,7 +42,7 @@ functions (MRWF). For more details on the methodology, see Ref.[@Qiao2023-mrwf].
     ??? quote "silicon.pw2wan"
 
         ```fortran linenums="1" title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex3/silicon.pw2wan"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex3/silicon.pw2wan"
         ```
 
 - `silicon.win` The `wannier90.x` input file
@@ -50,7 +50,7 @@ functions (MRWF). For more details on the methodology, see Ref.[@Qiao2023-mrwf].
     ??? quote "silicon.win"
 
         ```fortran linenums="1" title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex3/silicon.win::55"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex3/silicon.win::55"
         ...
         ...
         ```
@@ -60,7 +60,7 @@ functions (MRWF). For more details on the methodology, see Ref.[@Qiao2023-mrwf].
     ??? quote "mrwf.jl"
 
         ```julia linenums="1" title="Julia script"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex3/mrwf.jl"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex3/mrwf.jl"
         ```
 
 - `silicon_bandsdiff.gnu` The gnuplot script to compare DFT and Wannier bands
@@ -68,7 +68,7 @@ functions (MRWF). For more details on the methodology, see Ref.[@Qiao2023-mrwf].
     ??? quote "silicon_bandsdiff.gnu"
 
         ```gnuplot linenums="1" title="Gnuplot script"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex3/silicon_bandsdiff.gnu"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex3/silicon_bandsdiff.gnu"
         ```
 
 - `silicon_bandsdiff_val.gnu` The gnuplot script to compare Wannier bands for
@@ -77,7 +77,7 @@ functions (MRWF). For more details on the methodology, see Ref.[@Qiao2023-mrwf].
     ??? quote "silicon_bandsdiff_val.gnu"
 
         ```gnuplot linenums="1" title="Gnuplot script"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex3/silicon_bandsdiff_val.gnu"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex3/silicon_bandsdiff_val.gnu"
         ```
 
 - `silicon_bandsdiff_cond.gnu` The gnuplot script to compare Wannier bands for
@@ -86,7 +86,7 @@ functions (MRWF). For more details on the methodology, see Ref.[@Qiao2023-mrwf].
     ??? quote "silicon_bandsdiff_cond.gnu"
 
         ```gnuplot linenums="1" title="Gnuplot script"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex3/silicon_bandsdiff_cond.gnu"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex3/silicon_bandsdiff_cond.gnu"
         ```
 
 ## Steps

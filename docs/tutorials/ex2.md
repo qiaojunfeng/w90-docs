@@ -8,14 +8,14 @@ the methodology, see Ref.[@Qiao2023-pdwf].
 
 ## Input files
 
-- Directory: `Sat/ex2/`
+- Directory: `ex2/`
 
 - `silicon.scf` The `pw.x` input file for ground state calculation
 
     ??? quote "silicon.scf"
 
         ```fortran linenums="1" title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.scf"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex2/silicon.scf"
         ```
 
 - `silicon.bands` The `pw.x` input file for band structure calculation
@@ -23,7 +23,7 @@ the methodology, see Ref.[@Qiao2023-pdwf].
     ??? quote "silicon.bands"
 
         ```fortran linenums="1" title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.bands::45"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex2/silicon.bands::45"
         ...
         ...
         ```
@@ -33,7 +33,7 @@ the methodology, see Ref.[@Qiao2023-pdwf].
     ??? quote "silicon.bandsx"
 
         ```fortran linenums="1" title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.bandsx"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex2/silicon.bandsx"
         ```
 
 - `silicon.nscf` The `pw.x` input file to obtain Bloch states on a uniform grid
@@ -41,7 +41,7 @@ the methodology, see Ref.[@Qiao2023-pdwf].
     ??? quote "silicon.nscf"
 
         ```fortran linenums="1" title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.nscf::45"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex2/silicon.nscf::45"
         ...
         ...
         ```
@@ -51,7 +51,7 @@ the methodology, see Ref.[@Qiao2023-pdwf].
     ??? quote "silicon.pw2wan"
 
         ```fortran linenums="1" title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.pw2wan"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex2/silicon.pw2wan"
         ```
 
 - `silicon.win` The `wannier90.x` input file
@@ -59,7 +59,7 @@ the methodology, see Ref.[@Qiao2023-pdwf].
     ??? quote "silicon.win"
 
         ```fortran linenums="1" title="Input file"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.win::50"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex2/silicon.win::50"
         ...
         ...
         ```
@@ -69,7 +69,7 @@ the methodology, see Ref.[@Qiao2023-pdwf].
     ??? quote "silicon_bandsdiff.gnu"
 
         ```gnuplot linenums="1" title="Gnuplot script"
-        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon_bandsdiff.gnu"
+        --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex2/silicon_bandsdiff.gnu"
         ```
 
 ## Steps
@@ -152,7 +152,7 @@ the methodology, see Ref.[@Qiao2023-pdwf].
     these commented lines
 
     ```fortran linenums="10" title="Input file" hl_lines="5"
-    --8<-- "wannier-tutorials/2024_06_EPW_Austin/Qiao/ex2/silicon.pw2wan:10:14"
+    --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex2/silicon.pw2wan:10:14"
     ```
 
 2. Now that $3d$ projectors provide us a larger space for optimization,
