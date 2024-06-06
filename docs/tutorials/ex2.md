@@ -155,18 +155,25 @@ the methodology, see Ref.[@Qiao2023-pdwf].
     --8<-- "wannier-tutorials/2024_06_EPW_Austin/Sat.3.Qiao/ex2/silicon.pw2wan:10:14"
     ```
 
+    !!! hint
+
+        You need to set `num_wann = 8` in the `silicon.win` file as well, to
+        be consistent with the reduced number of projectors.
+
 2. Now that $3d$ projectors provide us a larger space for optimization,
     you can try increasing the `dis_froz_max` to freeze higher energy
     bands, if you are targeting at reproducing those eigenvalues.
 
-    Note that the `dis_proj_min/max` and `dis_froz_min/max` can be
-    enabled simultaneously: the union of inner energy window and
-    high-projectability states will be freezed, and the union of states
-    outside outer energy window and having low projectability will be
-    discared. Thus, you can still use energy window to make sure
-    near-Fermi energy states are well reproduced, and use
-    "projectability window" to selectively freeze atomic-like states in
-    the conduction region.
+    !!! note
+
+        The `dis_proj_min/max` and `dis_froz_min/max` can be
+        enabled simultaneously: the union of inner energy window and
+        high-projectability states will be freezed, and the union of states
+        outside outer energy window and having low projectability will be
+        discarded. Thus, you can still use energy window to make sure
+        near-Fermi energy states are well reproduced, and use
+        "projectability window" to selectively freeze atomic-like states in
+        the conduction region.
 
 3. The default `dis_proj_max = 0.95` might not freeze all the states
     you want, try changing this value and see the band interpolation
